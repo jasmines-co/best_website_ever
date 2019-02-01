@@ -14,6 +14,7 @@ const path = require("path");
 const port = process.env.PORT || 3000;
 
 //middleware
+app.use(express.static(path.join(__dirname, "client")));
 app.use(morgan("dev"));
 
 //index page
@@ -23,7 +24,7 @@ app.get("/", (req, res) => {
 
 //404 page
 app.get("*", (req, res) => {
-    res.send("error");
+    res.sendFile(path.join(__dirname, "client/dist/index.html"));
   });
 
 //port
