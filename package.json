@@ -12,12 +12,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
+    "bootstrap": "^4.2.1",
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "morgan": "^1.9.1",
     "next": "^7.0.2",
+    "node-sass": "^4.11.0",
     "parcel-bundler": "^1.10.3",
     "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "react-dom": "^16.7.0",
+    "reactstrap": "^7.1.0"
   }
 }

@@ -1,0 +1,20 @@
+// @font-face {
+//     font-family: 'Press Start 2P', cursive;
+//     src: url('/static/fonts/PressStart2P-Regular.ttf')
+// }
+
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+html, body {
+    font-family: Helvetica;
+  }
+
+  body {
+      background-color: #2a64f9;
+  }
+
+  img {
+    margin-left: 350px;
+    margin-top: 250px;
+  }
+  
