@@ -8,7 +8,8 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink
+  NavLink,
+  Button
 } from 'reactstrap';
 
 export default class Example extends React.Component {
@@ -35,6 +36,7 @@ export default class Example extends React.Component {
             <Nav className="ml-auto" navbar>
               <NavItem>
                 <NavLink href="/about">About</NavLink>
+          
               </NavItem>
 
             </Nav>
