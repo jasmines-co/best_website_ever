@@ -30,15 +30,16 @@ export default class Example extends React.Component {
     return (
       <div>
         <Navbar className="port-navbar port-default" color="dark" light expand="md">
-          <NavbarBrand href="/">ToshiText</NavbarBrand>
+          <NavbarBrand className="brand" href="/">ToshiText</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/about">About</NavLink>
-          
+                <NavLink href="/team">Team</NavLink>
               </NavItem>
-
+              <NavItem>
+                <NavLink href="/about">About</NavLink>
+              </NavItem>
             </Nav>
           </Collapse>
         </Navbar>

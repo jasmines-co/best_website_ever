@@ -8,7 +8,7 @@ import Link from 'next/link';
 const Index = () => (
     <div>
       <Header />
-      <img src="/static/logo.png" alt="logo" />
+      <img className="logo" src="/static/logo.png" alt="logo" />
     </div>
   )
   

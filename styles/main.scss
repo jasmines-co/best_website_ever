@@ -6,18 +6,34 @@
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
 
 html, body {
-    font-family: Helvetica;
+    font-family: Lato;
   }
 
   body {
       background-color: #2a64f9;
   }
 
-  img {
+  img.logo {
     margin-left: 450px;
     margin-top: 150px;
   }
   
   .bg-dark{
       background-color: #2a64f9 !important;
+  }
+
+  .navbar-light .navbar-brand {
+      color: yellow;
+  }
+
+  .navbar-light .navbar-nav .nav-link {
+      color: yellow !important;
+  }
+
+  div.card {
+    background-color: #2a64f9;
+  }
+
+  .img.card-img-top {
+    background-color: #2a64f9;  
   }
