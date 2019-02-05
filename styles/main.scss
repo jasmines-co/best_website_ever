@@ -10,7 +10,7 @@ html, body {
   }
 
   body {
-      background-color: #2a64f9;
+      background-color: #00007f;
   }
 
   img.logo {
@@ -19,7 +19,7 @@ html, body {
   }
   
   .bg-dark{
-      background-color: #2a64f9 !important;
+      background-color: #00007f !important;
   }
 
   .navbar-light .navbar-brand {
@@ -31,9 +31,17 @@ html, body {
   }
 
   div.card {
-    background-color: #2a64f9;
+    background-color: #00007f;
   }
 
   .img.card-img-top {
-    background-color: #2a64f9;  
+    background-color: #00007f;
+  }
+
+  div.card {
+      color: white;
+  }
+
+  .about-page h1, p {
+      color: white;
   }

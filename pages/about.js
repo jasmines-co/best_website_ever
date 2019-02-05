@@ -6,7 +6,7 @@ import Header from "../components/shared/Header";
 import Link from 'next/link';
 
 const About = () => (
-    <div>
+    <div className="about-page">
       <Header />
       <h1>About ToshiText</h1>
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
