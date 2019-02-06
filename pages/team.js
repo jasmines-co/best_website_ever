@@ -2,6 +2,8 @@ import Header from "../components/shared/Header";
 import React from 'react';
 import { Card, Button, CardImg, CardTitle, CardText, CardGroup,
  CardSubtitle, CardBody } from 'reactstrap';
+ // This is the Link API
+import Link from 'next/link';
 
 const Team = (props) => {
   return (
@@ -21,7 +23,7 @@ const Team = (props) => {
             it for the better. Jasmine moved to California to attend MakeSchool to sharpen her 
             technical skills and eventually create technology that will solve problems in her 
             community, and makes the world a better place.</CardText>
-          <Button>Button</Button>
+            <Button href="/link">Button</Button>
         </CardBody>
       </Card>
       <Card>
@@ -50,7 +52,7 @@ const Team = (props) => {
           <CardSubtitle>Backend Engineer</CardSubtitle>
           <br/>
           <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</CardText>
-          <Button>Button</Button>
+          <Button href="/link">Button</Button>
         </CardBody>
       </Card>
       <Card>
@@ -72,7 +74,7 @@ const Team = (props) => {
               enough to be accessible by everybody! He co-founded the Oakland 
               Blockchain Developers Meetup group. He now started and runs the 
               Programmable Money meetup in San Francisco.</CardText>
-          <Button>Button</Button>
+            <Button href="/link">Button</Button>
         </CardBody>
       </Card>
       <Card>
@@ -83,7 +85,7 @@ const Team = (props) => {
           <CardSubtitle>Product Manager/Git Master</CardSubtitle>
           <br/>
           <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-          <Button>Button</Button>
+          <Button href="/link">Button</Button>
         </CardBody>
       </Card>
     </CardGroup>

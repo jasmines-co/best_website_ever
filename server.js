@@ -10,9 +10,17 @@ app.prepare()
 .then(() => {
   const server = express()
 
+  const faviconOptions = {
+    root: __dirname + '/static/'
+  };
+  server.get('/favicon.ico', (req, res) => (
+    res.status(200).sendFile('favicon.ico', faviconOptions)
+  ));
+
   server.get('*', (req, res) => {
     return handle(req, res)
   })
+
 
   const PORT = process.env.PORT || 3000;
 
