@@ -12,20 +12,22 @@ import {
   Button
 } from 'reactstrap';
 
+import auth0 from '../../services/auth0';
+
 const Login = () => {
   return (
-    <span className ="nav-link port-navbar-link"> Login</span>
+    <span onClick={auth0.login} className ="nav-link port-navbar-link clickable"> Login</span>
   )
 }
 
 const Logout = () => {
   return (
-    <span className ="nav-link port-navbar-link"> Logout</span>
+    <span className ="nav-link port-navbar-link clickable"> Logout</span>
   )
 }
 
 
-export default class Example extends React.Component {
+export default class Header extends React.Component {
   constructor(props) {
     super(props);
 
@@ -52,6 +54,12 @@ export default class Example extends React.Component {
               </NavItem>
               <NavItem>
                 <NavLink href="/about">About</NavLink>
+              </NavItem>
+              <NavItem>
+                <Login />
+              </NavItem>
+              <NavItem>
+                <Logout />
               </NavItem>
             </Nav>
           </Collapse>
