@@ -4,8 +4,8 @@ import auth0Client from '../services/auth0';
 
 
 export default class Callback extends React.Component {
-    componentDidMount(){
-        auth0Client.handleAuthentication();
+    async componentDidMount(){
+       await auth0Client.handleAuthentication();
     }
 
     render(){

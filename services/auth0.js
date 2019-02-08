@@ -1,6 +1,8 @@
 // src/Auth/Auth.js
 
 import auth0 from 'auth0-js';
+import { resolve } from 'url';
+import { reject } from 'q';
 
 class Auth0 {
 
@@ -22,8 +24,9 @@ class Auth0 {
     this.auth0.parseHash((err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {
         this.setSession(authResult);
+        resolve();
       } else if (err) {
-        
+        reject(err)
         console.log(err);
         alert(`Error: ${err.error}. Check the console for further details.`);
       }
