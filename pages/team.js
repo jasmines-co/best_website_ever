@@ -3,10 +3,11 @@ import React from 'react';
 import { Card, Button, CardImg, CardTitle, CardText, CardGroup,
  CardSubtitle, CardBody } from 'reactstrap';
  // This is the Link API
-import Link from 'next/link';
+import BasePage from "../components/BasePage";
 
 const Team = (props) => {
   return (
+  <BasePage>
     <div className="about">
     <Header />
     <CardGroup>
@@ -90,6 +91,7 @@ const Team = (props) => {
       </Card>
     </CardGroup>
     </div>
+  </BasePage>
   );
 };
 

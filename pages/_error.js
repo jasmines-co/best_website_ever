@@ -2,9 +2,8 @@ import React from 'react'
 
 import Header from "../components/shared/Header";
 
+import BasePage from '../components/BasePage';
 
-// This is the Link API
-import Link from 'next/link';
 
 export default class Error extends React.Component {
   static getInitialProps({ res, err }) {
@@ -14,6 +13,7 @@ export default class Error extends React.Component {
 
   render() {
     return (
+  <BasePage>
     <div>
      <Header/>
      <img className="logo" src="/static/error_coin.png" alt="logo" />
@@ -23,6 +23,7 @@ export default class Error extends React.Component {
           : 'An error occurred on client'}
       </p>
       </div>
+    </BasePage>
     )
   }
 }

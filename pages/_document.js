@@ -1,4 +1,7 @@
-import Document, { Head, Main, NextScript } from 'next/document'
+import Document, { Head, Main, NextScript } from 'next/document';
+import BasePage from '../components/BasePage';
+
+
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -6,8 +9,9 @@ export default class MyDocument extends Document {
     return { ...initialProps }
   }
 
-  render() {
+  render(){
     return (
+    <BasePage>
       <html>
         <Head>
           <style>{`body { margin: 0 } /* custom! */`}</style>
@@ -18,6 +22,7 @@ export default class MyDocument extends Document {
           <NextScript />
         </body>
       </html>
+    </BasePage>
     )
   }
 }

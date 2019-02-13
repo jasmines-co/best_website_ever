@@ -1,11 +1,10 @@
 import React from 'react';
 import Header from "../components/shared/Header";
+import BasePage from '../components/BasePage';
 
-
-// This is the Link API
-import Link from 'next/link';
 
 const About = () => (
+   <BasePage>
     <div className="about-page">
       <Header />
       <h1>About ToshiText</h1>
@@ -26,6 +25,7 @@ const About = () => (
            and more recently with desktop publishing software like Aldus PageMaker including
         versions of Lorem Ipsum.</p>
     </div>
+   </BasePage>
   )
   
   export default About;
