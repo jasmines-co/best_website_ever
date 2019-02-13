@@ -68,8 +68,34 @@ class Auth0 {
   isAuthenticated() {
     // Check whether the current time is past the
     // access token's expiry time
-    const expiresAt = Cookies.getJson('expiresAt');
+    const expiresAt = Cookies.getJSON('expiresAt');
     return new Date().getTime() < expiresAt;
+  }
+
+  clientAuth(){
+    return this.isAuthenticated();
+  }
+
+  serverAuth(req){
+    if (req.headers.cookies){
+      const expiresAtCookie = req.headers.cookie.split(';').find(c => c.trim().startsWith('expiresAt='));
+      // const cookies = req.headers.cookie;
+      // console.log(cookies);
+      // const splitedCookies = cookies.split(';');
+      // console.log(splitedCookies);
+      // const expiresAtCookie = splitCookies.find(c => c.trim().startsWith('expiresAt='));
+      // console.log(expiresAtCookie);
+      // const expiresAtArray = expiresAtCookier.split('=');
+      // console.log(expiresArray);
+      // const expiresAt = expiresAtArray[1];
+      // console.log(expiresAt);
+      
+      if (!expiresAtCookie) { return undefined };
+
+      const expiresAt = expiresAtCookie.split('=')[1];
+
+      return new Date().getTime() < expiresAt;
+    }
   }
 }
 
