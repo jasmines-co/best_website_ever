@@ -4,12 +4,13 @@ import { Card, Button, CardImg, CardTitle, CardText, CardGroup,
  CardSubtitle, CardBody } from 'reactstrap';
  // This is the Link API
 import BasePage from "../components/BasePage";
+import BaseLayout from "../components/layouts/BaseLayout";
 
 const Team = (props) => {
   return (
+    <BaseLayout {...this.props.auth}>
   <BasePage>
     <div className="about">
-    <Header />
     <CardGroup>
       <Card>
         <CardImg top width="50%" src="/static/apple.png" alt="apple" />
@@ -92,6 +93,7 @@ const Team = (props) => {
     </CardGroup>
     </div>
   </BasePage>
+</BaseLayout>
   );
 };
 

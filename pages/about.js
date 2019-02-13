@@ -1,12 +1,13 @@
 import React from 'react';
 import Header from "../components/shared/Header";
 import BasePage from '../components/BasePage';
+import BaseLayout from '../components/layouts/BaseLayout';
 
 
 const About = () => (
+   <BaseLayout {...this.props.auth}>
    <BasePage>
     <div className="about-page">
-      <Header />
       <h1>About ToshiText</h1>
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
@@ -26,6 +27,7 @@ const About = () => (
         versions of Lorem Ipsum.</p>
     </div>
    </BasePage>
+</BaseLayout>
   )
   
   export default About;

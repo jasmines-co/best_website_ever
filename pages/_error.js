@@ -4,6 +4,8 @@ import Header from "../components/shared/Header";
 
 import BasePage from '../components/BasePage';
 
+import BaseLayout from '../components/layouts/BaseLayout';
+
 
 export default class Error extends React.Component {
   static getInitialProps({ res, err }) {
@@ -13,9 +15,9 @@ export default class Error extends React.Component {
 
   render() {
     return (
+  <BaseLayout {...this.props.auth}>
   <BasePage>
     <div>
-     <Header/>
      <img className="logo" src="/static/error_coin.png" alt="logo" />
       <p className="error-page">
         {this.props.statusCode
@@ -24,6 +26,7 @@ export default class Error extends React.Component {
       </p>
       </div>
     </BasePage>
+  </BaseLayout>
     )
   }
 }

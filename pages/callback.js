@@ -3,6 +3,7 @@ import Header from "../components/shared/Header";
 import BasePage from "../components/BasePage";
 import auth0Client from '../services/auth0';
 import { withRouter }  from 'next/router';
+import BaseLayout from "../components/layouts/BaseLayout";
 
 
 class Callback extends React.Component {
@@ -13,13 +14,14 @@ class Callback extends React.Component {
     }
 
     render(){
-        return(  
+        return( 
+    <BaseLayout {...this.props.auth}>
      <BasePage>
         <div>
-            <Header />
             <h1>You are logged in</h1> 
           </div> 
         </BasePage>
+      </BaseLayout>
         )
        }
     }
