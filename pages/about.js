@@ -1,10 +1,12 @@
 import React from 'react';
-import Header from "../components/shared/Header";
 import BasePage from '../components/BasePage';
 import BaseLayout from '../components/layouts/BaseLayout';
 
 
-const About = () => (
+class About extends React.Component {
+
+   render(){
+   return(
    <BaseLayout {...this.props.auth}>
    <BasePage>
     <div className="about-page">
@@ -29,5 +31,7 @@ const About = () => (
    </BasePage>
 </BaseLayout>
   )
+ }
+}
   
   export default About;

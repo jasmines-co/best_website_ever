@@ -1,7 +1,5 @@
 import React from 'react'
 
-import Header from "../components/shared/Header";
-
 import BasePage from '../components/BasePage';
 
 import BaseLayout from '../components/layouts/BaseLayout';

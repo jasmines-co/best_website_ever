@@ -10,12 +10,12 @@ class Callback extends React.Component {
 
     async componentDidMount(){
        await auth0Client.handleAuthentication();
-       this.props.router.push('/about')
+       this.props.router.push('/')
     }
 
     render(){
         return( 
-    <BaseLayout {...this.props.auth}>
+    <BaseLayout>
      <BasePage>
         <div>
             <h1>You are logged in</h1> 

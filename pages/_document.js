@@ -1,5 +1,4 @@
 import Document, { Head, Main, NextScript } from 'next/document';
-import BasePage from '../components/BasePage';
 import BaseLayout from '../components/layouts/BaseLayout';
 
 
@@ -12,8 +11,6 @@ export default class MyDocument extends Document {
 
   render(){
     return (
-    <BaseLayout {...this.props.auth}>
-    <BasePage>
       <html>
         <Head>
           <style>{`body { margin: 0 } /* custom! */`}</style>
@@ -24,8 +21,6 @@ export default class MyDocument extends Document {
           <NextScript />
         </body>
       </html>
-    </BasePage>
-  </BaseLayout>
     )
   }
 }

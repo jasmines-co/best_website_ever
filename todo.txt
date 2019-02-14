@@ -1,3 +1,4 @@
+rewrite how you allow components
 add how to use app page
 login
 logout

@@ -6,9 +6,10 @@ import { Card, Button, CardImg, CardTitle, CardText, CardGroup,
 import BasePage from "../components/BasePage";
 import BaseLayout from "../components/layouts/BaseLayout";
 
-const Team = (props) => {
+class Team extends React.Component {
+  render(){
   return (
-    <BaseLayout {...this.props.auth}>
+<BaseLayout {...this.props.auth}>
   <BasePage>
     <div className="about">
     <CardGroup>
@@ -95,6 +96,8 @@ const Team = (props) => {
   </BasePage>
 </BaseLayout>
   );
-};
+  }
+ };
+
 
 export default Team;
