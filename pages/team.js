@@ -3,12 +3,15 @@ import React from 'react';
 import { Card, Button, CardImg, CardTitle, CardText, CardGroup,
  CardSubtitle, CardBody } from 'reactstrap';
  // This is the Link API
-import Link from 'next/link';
+import BasePage from "../components/BasePage";
+import BaseLayout from "../components/layouts/BaseLayout";
 
-const Team = (props) => {
+class Team extends React.Component {
+  render(){
   return (
+<BaseLayout {...this.props.auth}>
+  <BasePage>
     <div className="about">
-    <Header />
     <CardGroup>
       <Card>
         <CardImg top width="50%" src="/static/apple.png" alt="apple" />
@@ -90,7 +93,11 @@ const Team = (props) => {
       </Card>
     </CardGroup>
     </div>
+  </BasePage>
+</BaseLayout>
   );
-};
+  }
+ };
+
 
 export default Team;

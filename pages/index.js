@@ -1,16 +1,24 @@
 import React from 'react';
-import Header from "../components/shared/Header";
+import BaseLayout from '../components/layouts/BaseLayout';
 
 
-// This is the Link API
-import Link from 'next/link';
 
-const Index = () => (
+class Index extends React.Component {
+
+  constructor(props) {
+    super(props);
+  }
+
+  render(){
+    // const { isAuthenticated, user } = this.props.auth;
+    return(
+    <BaseLayout {...this.props.auth}>
     <div>
-      <Header />
       <img className="logo" src="/static/dark-logo.png" alt="logo" />
       <p className='tagline'>Bitcoin Cash at your Fingertips</p>
     </div>
+  </BaseLayout>
   )
-  
+ }
+}
   export default Index;
