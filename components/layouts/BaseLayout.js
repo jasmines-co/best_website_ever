@@ -4,7 +4,7 @@ import Header from '../shared/Header';
 import Head from 'next/head';
 
 const BaseLayout = (props) => {
-  const { className, children, isAuthenticated, user, isSiteOwner, cannonical } = props;
+  const { className, children, isAuthenticated } = props;
   // const headerType = props.headerType || 'default';
   const title = props.title || 'ToshiText';
   return (
@@ -15,7 +15,7 @@ const BaseLayout = (props) => {
         {cannonical && <link rel="cannonical" href={`${process.env.BASE_URL}${cannonical}`}/>} */}
       </Head>
       <div className="layout-container" >
-      <Header isAuthenticated={isAuthenticated} user={user}/>
+      <Header isAuthenticated={isAuthenticated}/>
         <main className={`cover ${className}`}>
           <div className="wrapper">
             {children}

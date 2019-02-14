@@ -1,6 +1,7 @@
 
 
 import React from 'react';
+import Link from 'next/link';
 import {
   Collapse,
   Navbar,
@@ -42,7 +43,7 @@ export default class Header extends React.Component {
     });
   }
   render() {
-    const { isAuthenticated, user } = this.props;
+    const { isAuthenticated } = this.props;
     return (
       <div>
         <Navbar className="port-navbar port-default" color="dark" light expand="md">
@@ -56,21 +57,12 @@ export default class Header extends React.Component {
               <NavItem>
                 <NavLink href="/about">About</NavLink>
               </NavItem>
-              { !isAuthenticated &&
               <NavItem>
                 <Login />
               </NavItem>
-              }
-              { isAuthenticated &&
               <NavItem>
                 <Logout />
               </NavItem>
-              }
-              { isAuthenticated &&
-              <NavItem>
-               <span>{user.name}</span>
-              </NavItem>
-              }
             </Nav>
           </Collapse>
         </Navbar>

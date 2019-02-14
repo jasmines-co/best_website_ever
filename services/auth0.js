@@ -74,36 +74,47 @@ class Auth0 {
     return new Date().getTime() < expiresAt;
   }
 
-  verifyToken(token){
-    if(token){
-      const decodedToken = jwt.decode(token);
-      const expiresAt = decodedToken.exp * 1000;
+  // verifyToken(token){
+  //   if(token){
+  //     const decodedToken = jwt.decode(token);
+  //     const expiresAt = decodedToken.exp * 1000;
 
-      return (decodedToken && new Date().getTime() < expiresAt) ? decodedToken : undefined;
-    }
-    return undefined;
-  }
+  //     return (decodedToken && new Date().getTime() < expiresAt) ? decodedToken : undefined;
+  //   }
+  //   return undefined;
+  // }
 
   clientAuth(){
-    // return this.isAuthenticated();
-    const token = Cookies.getJSON('jwt');
-    const verifiedToken = this.verifyToken(token);
+    return this.isAuthenticated();
+    // const token = Cookies.getJSON('jwt');
+    // const verifiedToken = this.verifyToken(token);
 
-    return token;
+    // return token;
   }
 
   serverAuth(req){
-    if (req.headers.cookies){
-      const tokenCookie = req.headers.cookie.split(';').find(c => c.trim().startsWith('jwt='));
+    if (req.headers.cookie){
+      const expiresAtCookie = req.headers.cookie.split(';').find(c => c.trim().startsWith('expiresAt'));
   
-      if (!tokenCookie) { return undefined };
+      if (!expiresAtCookie) { return undefined };
 
-      const token = tokenCookie.split('=')[1];
-      const verifiedToken = this.verifyToken(token);
+      const expiresAt = expiresAtCookie.split('=')[1];
 
-      return verifiedToken;
+      // const cookies = req.headers.cookie;
+      // console.log(cookies);
+      // const splittedCookies = cookies.split(';')
+      // console.log(splittedCookies);
+      // const expiresAtCookie = splittedCookies.find(c => c.trim().startsWith('expiresAt='));
+      // console.log(expiresAtCookie);
+      // const expiresAtArray = expiresAtCookie.split('=')[1];
+      // console.log(expiresAtArray);
+      // const expiresAt = expiresAtArray[1];
+      // console.log(expiresAt);
+      // const verifiedToken = this.verifyToken(token);
+
+      return new Date().getTime() < expiresAt;
     }
-    return undefined
+    // return undefined
   }
 }
 
