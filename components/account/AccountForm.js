@@ -1,21 +1,27 @@
+// Render Prop
 import React from 'react';
-import { Formik } from 'formik';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Button, FormGroup, Label } from 'reactstrap';
+
+const validateInputs = (validate) => {
+    let errors = {};
+    // if (!values.email) {
+    //   errors.email = 'Required';
+    // } else if (
+    //   !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+    // ) {
+    //   errors.email = 'Invalid email address';
+    // }
+    return errors;
+}
+
+const INITIAL_VALUES = {name: '', username: '', password: '', country: '', phone: ''}
 
 const AccountForm = () => (
   <div>
     <Formik
-      initialValues={{ email: '', password: '' }}
-      validate={values => {
-        let errors = {};
-        if (!values.email) {
-          errors.email = 'Required';
-        } else if (
-          !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-        ) {
-          errors.email = 'Invalid email address';
-        }
-        return errors;
-      }}
+      initialValues={INITIAL_VALUES}
+      validate={validateInputs}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
           alert(JSON.stringify(values, null, 2));
@@ -23,37 +29,38 @@ const AccountForm = () => (
         }, 400);
       }}
     >
-      {({
-        values,
-        errors,
-        touched,
-        handleChange,
-        handleBlur,
-        handleSubmit,
-        isSubmitting,
-        /* and other goodies */
-      }) => (
-        <form onSubmit={handleSubmit}>
-          <input
-            type="email"
-            name="email"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values.email}
-          />
-          {errors.email && touched.email && errors.email}
-          <input
-            type="password"
-            name="password"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values.password}
-          />
-          {errors.password && touched.password && errors.password}
+      {({ isSubmitting }) => (
+        <Form>
+       <FormGroup>
+           
+        <label>Name: </label>
+          <Field className="form-control" type="text" name="name" />
+          <ErrorMessage name="name" component="div" />
+        </FormGroup>
+        <FormGroup>
+        <label>Username: </label>
+          <Field className="form-control" type="text" name="username" />
+          <ErrorMessage name="username" component="div" />
+        </FormGroup>
+        <FormGroup>
+          <label>Password: </label>
+          <Field className="form-control" type="password" name="password" />
+          <ErrorMessage name="password" component="div" />
+        </FormGroup>
+        <FormGroup>
+          <label>Country Code:</label>
+          <Field className="form-control" type="number" name="country" />
+          <ErrorMessage name="country" component="div" />
+        </FormGroup>
+        <FormGroup>
+          <label>Phone Number</label>
+          <Field className="form-control" type="phone" name="phone" />
+          <ErrorMessage name="phone" component="div" />
+        </FormGroup>
           <button type="submit" disabled={isSubmitting}>
             Submit
           </button>
-        </form>
+        </Form>
       )}
     </Formik>
   </div>
