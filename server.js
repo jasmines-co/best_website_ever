@@ -55,28 +55,59 @@ app.prepare()
 
 
   server.post('/newRequest', function (req, res) {
-    var requestId = req.body.requestId;
+    var accountId = req.body.accountId;
     var user = req.user;
   
-    Request.findOne({ _id: requestId })
-    .then(function (property) {
-      var reservation = new Reservation({
+    Account.findOne({ _id: accountId })
+    .then(function (account) {
+      var request = new Request({
         message: req.body.message,
-        property: propertyId,
+        account: accountId,
         guest: user.id
       });
   
-      return reservation.save();
+      return request.save();
     })
     .then(function () {
       notifier.sendNotification();
-      res.redirect('/properties');
+      res.redirect('/');
     })
     .catch(function(err) {
       console.log(err);
     });
   });
   
+
+
+// POST: /reservations/handle
+router.post('/handle', twilio.webhook({validate: false}), function (req, res) {
+  var from = req.body.From;
+  var smsRequest = req.body.Body;
+
+  var smsResponse;
+
+  User.findOne({phoneNumber: from})
+  .then(function (host) {
+    return request.findOne({status: 'pending'});
+  })
+  .then(function (request) {
+    if (request === null) {
+      throw 'No pending requests';
+    }
+    request.status = smsRequest.toLowerCase() === "accept" ? "confirmed" : "rejected";
+    return request.save();
+  })
+  .then(function (request) {
+    var message = "You have successfully " + request.status + " the request";
+    respond(res, message);
+  })
+  .catch(function (err) {
+    var message = "Sorry, it looks like you do not have any requests to respond to";
+    respond(res, message);
+  });
+});
+
+
 //user
   server.post('/newUser', (req, res) =>{
     const userData = req.body;

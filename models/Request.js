@@ -7,12 +7,12 @@ const requestSchema = new mongoose.Schema({
   message:  { type: String },
   status:   { type: String, default: 'pending' },
   date:     { type: Date, default: Date.now },
-  wallet: {
+  account: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'wallet'
+    ref: 'account'
   },
   //needs a better name
-  holder:     {
+  guest:     {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'user'
   }
