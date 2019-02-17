@@ -8,6 +8,7 @@ const userSchema = new mongoose.Schema({
   countryCode: { type: String, required: true },
   phoneNumber: { type: String, required: true },
   date:        { type: Date, default: Date.now },
+  ETH: {type: String, required: false, max: 64},
 });
 
 

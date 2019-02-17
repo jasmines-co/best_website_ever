@@ -6,6 +6,14 @@ import AccountForm from '../components/account/AccountForm'
 
 class AccountNew extends React.Component {
 
+  constructor(props){
+    super();
+    this.saveAccount = this.saveAccount.bind(this);
+  }
+  saveAccount(accountData) {
+    alert(JSON.stringify(accountData, null, 2));
+  }
+
   renderSecretPage() {
     const { isAuthenticated } = this.props.auth;
 
@@ -14,7 +22,7 @@ class AccountNew extends React.Component {
         <BaseLayout {...this.props.auth}>
         <BasePage>
          <div className="account-new">
-           <AccountForm />
+           <AccountForm onSumbit={this.saveAccount}/>
          </div>
         </BasePage>
      </BaseLayout>

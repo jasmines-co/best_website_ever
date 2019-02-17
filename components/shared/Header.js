@@ -62,6 +62,11 @@ export default class Header extends React.Component {
                 <Login />
               </NavItem>
               }
+                { isAuthenticated &&
+              <NavItem>
+               <NavLink href="/accountNew">Account</NavLink>
+              </NavItem>
+              }
               { isAuthenticated &&
               <NavItem>
                 <Logout />

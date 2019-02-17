@@ -17,21 +17,23 @@ const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
 
-const Wallet = require('./models/wallet')
+const Account = require('../models/account')
 
 app.prepare()
 .then(() => {
-  const server = express()
+  const server = express();
+  server.use(bodyParser.json());
 
-  server.post('/api/wallet', (req, res) =>{
-    const walletData = req.body;
-    const wallet = new Wallet(walletData);
+  server.post('/newAccount', (req, res) =>{
+    const accountData = req.body;
+    const account = new Account(accountData);
+    
 
-    wallet.save((err, createdWallet) => {
+    account.save((err, createdAccount) => {
       if(err){
         return res.status(422).send(err);
       }
-      return res.json(createdWallet)
+      return res.json(createdAccount);
     });
   });
 
