@@ -52,6 +52,31 @@ app.prepare()
       return res.json(createdRequest);
     });
   });
+
+
+  server.post('/newRequest', function (req, res) {
+    var requestId = req.body.requestId;
+    var user = req.user;
+  
+    Request.findOne({ _id: requestId })
+    .then(function (property) {
+      var reservation = new Reservation({
+        message: req.body.message,
+        property: propertyId,
+        guest: user.id
+      });
+  
+      return reservation.save();
+    })
+    .then(function () {
+      notifier.sendNotification();
+      res.redirect('/properties');
+    })
+    .catch(function(err) {
+      console.log(err);
+    });
+  });
+  
 //user
   server.post('/newUser', (req, res) =>{
     const userData = req.body;

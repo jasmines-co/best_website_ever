@@ -1,7 +1,8 @@
 import React from 'react';
 import BasePage from '../components/BasePage';
 import BaseLayout from '../components/layouts/BaseLayout';
-import AccountForm from '../components/account/AccountForm'
+import AccountForm from '../components/account/AccountForm';
+
 
 
 class AccountNew extends React.Component {
