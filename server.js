@@ -12,18 +12,21 @@ const methodOverride = require("method-override");
 const cors = require("cors");
 //SET UP MONGOOSE
 const mongoose = require("mongoose");
+const deepPopulate = require('mongoose-deep-populate')(mongoose);
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
 
-const Account = require('../models/account')
+const Account = require('./models/Account')
+const Request = require('./models/Request')
+const User = require('./models/User')
 
 app.prepare()
 .then(() => {
   const server = express();
   server.use(bodyParser.json());
-
+//account
   server.post('/newAccount', (req, res) =>{
     const accountData = req.body;
     const account = new Account(accountData);
@@ -34,6 +37,32 @@ app.prepare()
         return res.status(422).send(err);
       }
       return res.json(createdAccount);
+    });
+  });
+//request
+  server.post('/newRequest', (req, res) =>{
+    const requestData = req.body;
+    const request = new Request(requestData);
+    
+
+    request.save((err, createdRequest) => {
+      if(err){
+        return res.status(422).send(err);
+      }
+      return res.json(createdRequest);
+    });
+  });
+//user
+  server.post('/newUser', (req, res) =>{
+    const userData = req.body;
+    const user = new User(userData);
+    
+
+    user.save((err, createdUser) => {
+      if(err){
+        return res.status(422).send(err);
+      }
+      return res.json(createdUser);
     });
   });
 

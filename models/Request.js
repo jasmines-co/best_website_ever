@@ -4,7 +4,7 @@ const deepPopulate = require('mongoose-deep-populate')(mongoose);
 //model to request moeny from another user
 
 const requestSchema = new mongoose.Schema({
-  message:  { type: String, required: true },
+  message:  { type: String },
   status:   { type: String, default: 'pending' },
   date:     { type: Date, default: Date.now },
   wallet: {
