@@ -13,6 +13,8 @@ const cors = require("cors");
 //SET UP MONGOOSE
 const mongoose = require("mongoose");
 const deepPopulate = require('mongoose-deep-populate')(mongoose);
+const MessagingResponse = require('twilio').twiml.MessagingResponse;
+
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
