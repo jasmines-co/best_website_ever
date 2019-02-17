@@ -10,7 +10,7 @@ class Index extends React.Component {
   }
 
   render(){
-    // const { isAuthenticated, user } = this.props.auth;
+    const { isAuthenticated, user } = this.props.auth;
     return(
     <BaseLayout {...this.props.auth}>
     <div>

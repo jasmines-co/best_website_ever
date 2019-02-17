@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
 const walletSchema = new mongoose.Schema({
-  address: { type: String, required: true },
-  amount:    { type: String, required: true },
+  address: { type: String },
+  amount:    { type: String },
   date:        { type: Date, default: Date.now },
   owner:       {
     type: mongoose.Schema.Types.ObjectId,

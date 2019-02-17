@@ -17,9 +17,23 @@ const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
 
+const Wallet = require('./models/wallet')
+
 app.prepare()
 .then(() => {
   const server = express()
+
+  server.post('/api/wallet', (req, res) =>{
+    const walletData = req.body;
+    const wallet = new Wallet(walletData);
+
+    wallet.save((err, createdWallet) => {
+      if(err){
+        return res.status(422).send(err);
+      }
+      return res.json(createdWallet)
+    });
+  });
 
   const faviconOptions = {
     root: __dirname + '/static/'
