@@ -80,7 +80,7 @@ app.prepare()
 
 
 // POST: /reservations/handle
-router.post('/handle', twilio.webhook({validate: false}), function (req, res) {
+server.post('/handle', twilio.webhook({validate: false}), function (req, res) {
   var from = req.body.From;
   var smsRequest = req.body.Body;
 
