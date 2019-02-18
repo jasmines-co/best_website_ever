@@ -149,10 +149,10 @@ client.messages
   server.post('/', (req, res) => {
     const twiml = new MessagingResponse();
   
-    if (req.body.Body == 'hi') {
-      twiml.message('Hi from ToshiText!');
-    } else if (req.body.Body == 'bye') {
-      twiml.message('Goodbye from ToshiText');
+    if (req.body.Body == 'Account') {
+      twiml.message('You must create an account');
+    } else if (req.body.Body == 'Balance') {
+      twiml.message('You must create an account');
     } else {
       twiml.message(
         'No Body param match, Twilio sends this in the request to your server.'
