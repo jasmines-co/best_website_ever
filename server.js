@@ -21,9 +21,9 @@ const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
 
-const Account = require('./models/Account')
-const Request = require('./models/Request')
-const User = require('./models/User')
+// const Account = require('./models/Account')
+// const Request = require('./models/Request')
+// const User = require('./models/User')
 
 app.prepare()
 .then(() => {
@@ -112,19 +112,19 @@ app.prepare()
 
 
 //user
-  server.post('/newUser', (req, res) =>{
-    const userData = req.body;
-    const user = new User(userData);
+  // server.post('/newUser', (req, res) =>{
+  //   const userData = req.body;
+  //   const user = new User(userData);
     
 
-    user.save((err, createdUser) => {
-      if(err){
-        return res.status(422).send(err);
-      }
-      return res.json(createdUser);
-    });
-  });
-
+  //   user.save((err, createdUser) => {
+  //     if(err){
+  //       return res.status(422).send(err);
+  //     }
+  //     return res.json(createdUser);
+  //   });
+  // });
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN;
 
