@@ -41,9 +41,10 @@ const AccountForm = (props) => (
       onSubmit={props.onSubmit}
     >
       {({ isSubmitting }) => (
+
         <Form>
-       <FormGroup>
-           
+  
+       <FormGroup>        
         <label>Name: </label>
           <Field className="form-control" type="text" name="name" />
           <ErrorMessage name="name" component="div" />
