@@ -140,7 +140,7 @@ client.messages
   server.post('/sms', (req, res) => {
     const twiml = new MessagingResponse();
   
-    twiml.message('Welcome to ToshiText');
+    twiml.message('How can I help you?');
   
     res.writeHead(200, {'Content-Type': 'text/xml'});
     res.end(twiml.toString());
@@ -149,10 +149,10 @@ client.messages
   server.post('/', (req, res) => {
     const twiml = new MessagingResponse();
   
-    if (req.body.Body == 'hello') {
-      twiml.message('Hi!');
+    if (req.body.Body == 'hi') {
+      twiml.message('Hi from ToshiText!');
     } else if (req.body.Body == 'bye') {
-      twiml.message('Goodbye');
+      twiml.message('Goodbye from ToshiText');
     } else {
       twiml.message(
         'No Body param match, Twilio sends this in the request to your server.'
