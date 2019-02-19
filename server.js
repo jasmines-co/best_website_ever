@@ -1,7 +1,8 @@
 const express = require('express');
 const next = require('next');
+const dotenv = require('dotenv').config()
 const path = require('path');
-const twilio = require('twilio');
+// const twilio = require('twilio');
 //body-parser
 const bodyParser = require("body-parser");
 //logger
@@ -14,7 +15,7 @@ const cors = require("cors");
 //SET UP MONGOOSE
 const mongoose = require("mongoose");
 const deepPopulate = require('mongoose-deep-populate')(mongoose);
-const MessagingResponse = require('twilio').twiml.MessagingResponse;
+// const MessagingResponse = require('twilio').twiml.MessagingResponse;
 const http = require('http');
 
 const dev = process.env.NODE_ENV !== 'production'
@@ -124,9 +125,11 @@ app.prepare()
   //     return res.json(createdUser);
   //   });
   // });
+
+
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
-const client = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
+const client = require('twilio')(accountSid, authToken);
 
 client.messages
   .create({

@@ -33,7 +33,7 @@ const validateInputs = (values) => {
 
 const INITIAL_VALUES = {name: '', username: '', password: '', country: '', phone: ''}
 
-const AccountForm = (props) => (
+const RequestForm = (props) => (
   <div>
     <Formik
       initialValues={INITIAL_VALUES}
@@ -43,7 +43,7 @@ const AccountForm = (props) => (
       {({ isSubmitting }) => (
 
         <Form>
-        <h1 className="Account">Create An Account</h1>
+        <h1 className="Account">Create a Request</h1>
        <FormGroup>        
         <label>Name: </label>
           <Field className="form-control" type="text" name="name" />
@@ -78,5 +78,4 @@ const AccountForm = (props) => (
   </div>
 );
 
-export default AccountForm;
-
+export default RequestForm;
