@@ -23,7 +23,7 @@ class Index extends React.Component {
     <div className="container text-center">
       <div className="row">
         <div className="col-lg-10 mx-auto">
-          <h2>Send Your Friends and Family Money Without Fees!</h2>
+          <h2>Send Your Friends and Family Money in Seconds!</h2>
           <p className="lead mb-5">This theme features a flexible, UX friendly sidebar menu and stock photos from our friends at</p>
           <img src="/static/money.png" />
         </div>
@@ -35,25 +35,24 @@ class Index extends React.Component {
   <section className="content-section bg-primary text-white text-center" id="services">
     <div className="container">
       <div className="content-section-heading">
-        <h3 className="text-secondary mb-0">Services</h3>
-        <h2 className="mb-5">What We Offer</h2>
+        <h2 className="text-secondary mb-0">Services</h2>
       </div>
       <div className="row">
         <div className="col-lg-3 col-md-6 mb-5 mb-lg-0">
           <span className="service-icon rounded-circle mx-auto mb-3">
-            <i className="icon-screen-smartphone"></i>
+          <img src="static/phone.png" />
           </span>
           <h4>
-            <strong>Responsive</strong>
+            <strong>Mobile</strong>
           </h4>
-          <p className="text-faded mb-0">Looks great on any screen size!</p>
+          <p className="text-faded mb-0">Conduct the entire transaction via a phone</p>
         </div>
         <div className="col-lg-3 col-md-6 mb-5 mb-lg-0">
           <span className="service-icon rounded-circle mx-auto mb-3">
-            <i className="icon-pencil"></i>
+            <img src="static/phone.png" />
           </span>
           <h4>
-            <strong>Redesigned</strong>
+            <strong>Ease of Use</strong>
           </h4>
           <p className="text-faded mb-0">Freshly redesigned for Bootstrap 4.</p>
         </div>
@@ -62,7 +61,7 @@ class Index extends React.Component {
             <i className="icon-like"></i>
           </span>
           <h4>
-            <strong>Favorited</strong>
+            <strong>Purchase Blockchain</strong>
           </h4>
           <p className="text-faded mb-0">Millions of users
             <i className="fas fa-heart"></i>
@@ -73,7 +72,7 @@ class Index extends React.Component {
             <i className="icon-mustache"></i>
           </span>
           <h4>
-            <strong>Question</strong>
+            <strong>No Fees</strong>
           </h4>
           <p className="text-faded mb-0">I mustache you a question...</p>
         </div>
