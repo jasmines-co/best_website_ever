@@ -25,6 +25,7 @@ class Index extends React.Component {
         <div className="col-lg-10 mx-auto">
           <h2>Send Your Friends and Family Money Without Fees!</h2>
           <p className="lead mb-5">This theme features a flexible, UX friendly sidebar menu and stock photos from our friends at</p>
+          <img src="/static/money.png" />
         </div>
       </div>
     </div>
