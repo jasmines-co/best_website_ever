@@ -10,23 +10,14 @@ class About extends React.Component {
    <BaseLayout {...this.props.auth}>
    <BasePage>
     <div className="about-page">
-      <h1>About ToshiText</h1>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-           Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-           when an unknown printer took a galley of type and scrambled it to make a type 
-           specimen book. It has survived not only five centuries, but also the leap into 
-           electronic typesetting, remaining essentially unchanged. It was popularised in 
-           the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-           and more recently with desktop publishing software like Aldus PageMaker including
-        versions of Lorem Ipsum.</p>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-           Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-           when an unknown printer took a galley of type and scrambled it to make a type 
-           specimen book. It has survived not only five centuries, but also the leap into 
-           electronic typesetting, remaining essentially unchanged. It was popularised in 
-           the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-           and more recently with desktop publishing software like Aldus PageMaker including
-        versions of Lorem Ipsum.</p>
+      <h1 className="about">About ToshiText</h1>
+      <img className="make-image" src="/static/makeschool.jpg" />
+
+      <p>ToshiText was created at Make School in San Francisco, CA. 
+         The goal of the project is to give users to around the world
+         the ability to send microtransactions without bank accounts or
+         internet access.
+      </p>
     </div>
    </BasePage>
 </BaseLayout>

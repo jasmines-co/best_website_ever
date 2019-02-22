@@ -14,7 +14,7 @@ class Team extends React.Component {
     <div className="about">
     <CardGroup>
       <Card>
-        <CardImg top width="50%" src="/static/apple.png" alt="apple" />
+        <CardImg top width="50%" src="/static/jasminea.jpeg" alt="apple" />
         <CardBody>
           <CardTitle><h3>Jasmine Anderson</h3></CardTitle>
           <br/>
@@ -26,11 +26,10 @@ class Team extends React.Component {
             it for the better. Jasmine moved to California to attend MakeSchool to sharpen her 
             technical skills and eventually create technology that will solve problems in her 
             community, and makes the world a better place.</CardText>
-            <Button href="/link">Button</Button>
         </CardBody>
       </Card>
       <Card>
-        <CardImg top width="100%" src="/static/fluttershy2.png" alt="Card image cap" />
+        <CardImg top width="100%" src="/static/kendra.png" alt="Card image cap" />
         <CardBody>
           <CardTitle><h3>Kendra Moore</h3></CardTitle>
           <br/>
@@ -44,22 +43,20 @@ class Team extends React.Component {
              and Estonia. She has visited over 25 countries to include Colombia 
              this past December where she visited Rappi, the first South American 
              unicorn tech company.</CardText>
-          <Button>Button</Button>
         </CardBody>
       </Card>
       <Card>
-        <CardImg top width="100%" src="/static/pinkie.png" alt="Card image cap" />
+        <CardImg top width="100%" src="/static/sukrobjon.jpeg" alt="Card image cap" />
         <CardBody>
           <CardTitle><h3>Sukrobjon Golibboev</h3></CardTitle>
           <br/>
           <CardSubtitle>Backend Engineer</CardSubtitle>
           <br/>
-          <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</CardText>
-          <Button href="/link">Button</Button>
+          <CardText>Is Amazing.</CardText>
         </CardBody>
       </Card>
       <Card>
-        <CardImg top width="100%" src="/static/rainbow.png" alt="Card image cap" />
+        <CardImg top width="100%" src="/static/fode.jpeg" alt="Card image cap" />
         <CardBody>
           <CardTitle><h3>Fodé Diop</h3></CardTitle>
           <br/>
@@ -77,18 +74,16 @@ class Team extends React.Component {
               enough to be accessible by everybody! He co-founded the Oakland 
               Blockchain Developers Meetup group. He now started and runs the 
               Programmable Money meetup in San Francisco.</CardText>
-            <Button href="/link">Button</Button>
         </CardBody>
       </Card>
       <Card>
-        <CardImg top width="100%" src="/static/twilight.png" alt="Card image cap" />
+        <CardImg top width="100%" src="/static/jasmineh.png" alt="Card image cap" />
         <CardBody>
           <CardTitle><h3>Jasmine Humbert</h3></CardTitle>
           <br/>
           <CardSubtitle>Product Manager/Git Master</CardSubtitle>
           <br/>
-          <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-          <Button href="/link">Button</Button>
+          <CardText>Also amazing.</CardText>
         </CardBody>
       </Card>
     </CardGroup>
