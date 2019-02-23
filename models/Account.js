@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+//property
 const accountSchema = new mongoose.Schema({
   address: { type: String },
   amount:    { type: String },

@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const deepPopulate = require('mongoose-deep-populate')(mongoose);
 //model to request moeny from another user
 
+//reservations
 const requestSchema = new mongoose.Schema({
   message:  { type: String },
   status:   { type: String, default: 'pending' },
