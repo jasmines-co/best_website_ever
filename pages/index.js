@@ -24,8 +24,7 @@ class Index extends React.Component {
       <div className="row">
         <div className="col-lg-10 mx-auto">
           <h2>Send Your Friends and Family Money in Seconds!</h2>
-          <p className="lead mb-5">This theme features a flexible, UX friendly sidebar menu and stock photos from our friends at</p>
-          <img src="/static/money.png" />
+          <img src="/static/sending-money.png" />
         </div>
       </div>
     </div>
@@ -47,77 +46,68 @@ class Index extends React.Component {
           </h4>
           <p className="text-faded mb-0">Conduct the entire transaction via a phone</p>
         </div>
-        <div className="col-lg-3 col-md-6 mb-5 mb-lg-0">
-          <span className="service-icon rounded-circle mx-auto mb-3">
-            <img src="static/phone.png" />
-          </span>
-          <h4>
-            <strong>Ease of Use</strong>
-          </h4>
-          <p className="text-faded mb-0">Freshly redesigned for Bootstrap 4.</p>
-        </div>
         <div className="col-lg-3 col-md-6 mb-5 mb-md-0">
           <span className="service-icon rounded-circle mx-auto mb-3">
-            <i className="icon-like"></i>
+            <img src="/static/register.png"/>
           </span>
           <h4>
             <strong>Purchase Blockchain</strong>
           </h4>
-          <p className="text-faded mb-0">Millions of users
+          <p className="text-faded mb-0">No need for Coinbase
             <i className="fas fa-heart"></i>
-            Start Bootstrap!</p>
+      </p>
         </div>
         <div className="col-lg-3 col-md-6">
           <span className="service-icon rounded-circle mx-auto mb-3">
-            <i className="icon-mustache"></i>
+            <img src="static/piggy.png" />
           </span>
           <h4>
-            <strong>No Fees</strong>
+            <strong>Low Fees</strong>
           </h4>
-          <p className="text-faded mb-0">I mustache you a question...</p>
+          <p className="text-faded mb-0">Cheaper than Western Union</p>
         </div>
       </div>
     </div>
   </section>
 
+  
+
   <section className="content-section" id="portfolio">
     <div className="container">
       <div className="content-section-heading text-center">
-        <h3 className="text-secondary mb-0">Portfolio</h3>
-        <h2 className="mb-5">Recent Projects</h2>
+        <h2 className="mb-5">Use Cases</h2>
       </div>
       <div className="row no-gutters">
         <div className="col-lg-6">
           <a className="portfolio-item" href="#">
             <span className="caption">
               <span className="caption-content">
-                <h2>Stationary</h2>
-                <p className="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>
+                <h2>Foreign Countries</h2>
+                <p className="mb-0">Wireless internet data is very expensive</p>
               </span>
             </span>
-            <img className="img-fluid" src="img/portfolio-1.jpg" alt=""/>
+            <img className="portfolio" src="/static/chat.png" />
           </a>
         </div>
         <div className="col-lg-6">
           <a className="portfolio-item" href="#">
             <span className="caption">
               <span className="caption-content">
-                <h2>Ice Cream</h2>
-                <p className="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>
+                <h2>Microtransactions</h2>
+                <p className="mb-0">People who need to send small amounts of money</p>
               </span>
             </span>
-            <img className="img-fluid" src="img/portfolio-2.jpg" alt=""/>
+            <img className="portfolio" src="/static/currency.png" alt=""/>
           </a>
         </div>
         <div className="col-lg-6">
           <a className="portfolio-item" href="#">
             <span className="caption">
               <span className="caption-content">
-                <h2>Strawberries</h2>
-                <p className="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>
+                <p className="mb-0">People in an austere environment</p>
               </span>
             </span>
-            <img className="img-fluid" src="img/portfolio-3.jpg" alt=""/>
+            <img className="portfolio" src="/static/tent.png" alt=""/>
           </a>
         </div>
         <div className="col-lg-6">
@@ -125,10 +115,10 @@ class Index extends React.Component {
             <span className="caption">
               <span className="caption-content">
                 <h2>Workspace</h2>
-                <p className="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
+                <p className="mb-0">Participate in blockchain</p>
               </span>
             </span>
-            <img className="img-fluid" src="img/portfolio-4.jpg" alt=""/>
+            <img className="portfolio" src="/static/bitcoin.png" alt=""/>
           </a>
         </div>
       </div>
