@@ -102,7 +102,7 @@ class Index extends React.Component {
           <img className="money" src="/static/texting.png" />
           </section>    
           <section className='child-container'>
-          <h1 className="right-text">SMS is cheap</h1>
+          <h1 className="right-text">Phone Data is Expensive</h1>
           <p className="use-paragraph">orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
             Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
             unknown printer took a galley of type and scrambled it to make a type specimen book. 
@@ -118,7 +118,7 @@ class Index extends React.Component {
   <section className="content-section bg-light" id="about">
     <div className="container-box">      
           <section className='child-container'>
-          <h1 className="right-text">Microtransactions</h1>
+          <h1 className="right-text">Need to Conduct Microtransactions</h1>
           <p className="use-paragraph">orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
             Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
             unknown printer took a galley of type and scrambled it to make a type specimen book. 
@@ -140,7 +140,7 @@ class Index extends React.Component {
           <img className="money" src="/static/blockchain.jpg" />
           </section>     
           <section className='child-container'>
-          <h2 className="right-text">Participate in Blockchain</h2>
+          <h2 className="right-text">Desire to Participate in Blockchain</h2>
           <p className="use-paragraph">orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
             Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
             unknown printer took a galley of type and scrambled it to make a type specimen book. 
@@ -156,7 +156,7 @@ class Index extends React.Component {
   <section className="content-section bg-light" id="about">
     <div className="container-box"> 
           <section className='child-container'>
-          <h2 className="right-text">People in Austere Environments</h2>
+          <h2 className="right-text">Living in an Austere Environments</h2>
           <p className="use-paragraph">orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
             Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
             unknown printer took a galley of type and scrambled it to make a type specimen book. 
