@@ -20,13 +20,13 @@ class Index extends React.Component {
     <div>
 
   <section className="content-section bg-light" id="about">
-    <div className="container text-center">
-      <div className="row">
-        <div className="col-lg-10 mx-auto">
-          <h2>Send Your Friends and Family Money in Seconds!</h2>
-          <img src="/static/sending-money.png" />
-        </div>
-      </div>
+    <div className="container-box">      
+          <section className='child-container'>
+          <h2 className="right-text">Send Your Friends and Family Money in Seconds!</h2>
+          </section>
+          <section className='child-container'>
+          <img className="money" src="/static/sending-money.png" />
+          </section>    
     </div>
   </section>
 

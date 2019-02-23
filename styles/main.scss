@@ -9,6 +9,17 @@ html, body {
     font-family: Lato;
   }
 
+  .container-box {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-content: flex-start;
+  }
+
+  h2.right-test {
+      margin-top: 100px;
+  }
+
   body {
       background-color: #07207F;
   }
