@@ -32,11 +32,18 @@ class Index extends React.Component {
 
   
   <section className="content-section bg-primary text-white text-center" id="services">
+
+
     <div className="container">
+
+
       <div className="content-section-heading">
         <h2 className="text-secondary mb-0">Services</h2>
       </div>
+
       <div className="row">
+
+
         <div className="col-lg-3 col-md-6 mb-5 mb-lg-0">
           <span className="service-icon rounded-circle mx-auto mb-3">
           <img src="static/phone.png" />
@@ -46,6 +53,8 @@ class Index extends React.Component {
           </h4>
           <p className="text-faded mb-0">Conduct the entire transaction via a phone</p>
         </div>
+
+
         <div className="col-lg-3 col-md-6 mb-5 mb-md-0">
           <span className="service-icon rounded-circle mx-auto mb-3">
             <img src="/static/register.png"/>
@@ -57,6 +66,8 @@ class Index extends React.Component {
             <i className="fas fa-heart"></i>
       </p>
         </div>
+
+
         <div className="col-lg-3 col-md-6">
           <span className="service-icon rounded-circle mx-auto mb-3">
             <img src="static/piggy.png" />
@@ -66,17 +77,22 @@ class Index extends React.Component {
           </h4>
           <p className="text-faded mb-0">Cheaper than Western Union</p>
         </div>
-        <div className="col-lg-3 col-md-6">
+
+        <div className="col-lg-3 col-md-6 mb-5 mb-lg-0">
           <span className="service-icon rounded-circle mx-auto mb-3">
-            <img src="static/safe.png" />
+            <img src="static/safe-two.png" />
           </span>
           <h4>
             <strong>Safe and Secure</strong>
           </h4>
           <p className="text-faded mb-0">You can trust us with your data</p>
         </div>
+
+
       </div>
+
     </div>
+
   </section>
 
   <section className="content-section bg-light" id="about">
@@ -121,7 +137,7 @@ class Index extends React.Component {
   <section className="content-section bg-light" id="about">
     <div className="container-box"> 
           <section className='child-container'>
-          <img className="money" src="/static/bit.jpeg" />
+          <img className="money" src="/static/blockchain.jpg" />
           </section>     
           <section className='child-container'>
           <h2 className="right-text">Participate in Blockchain</h2>
@@ -159,20 +175,14 @@ class Index extends React.Component {
   <footer className="footer text-center">
     <div className="container">
       <ul className="list-inline mb-5">
+        <li className="list-inline-item"></li>
+     
+   
         <li className="list-inline-item">
-          <a className="social-link rounded-circle text-white mr-3" href="#">
-            <i className="icon-social-facebook"></i>
-          </a>
+  
         </li>
         <li className="list-inline-item">
-          <a className="social-link rounded-circle text-white mr-3" href="#">
-            <i className="icon-social-twitter"></i>
-          </a>
-        </li>
-        <li className="list-inline-item">
-          <a className="social-link rounded-circle text-white" href="#">
-            <i className="icon-social-github"></i>
-          </a>
+
         </li>
       </ul>
       <p className="text-muted small mb-0">Copyright &copy; ToshiText 2019</p>
