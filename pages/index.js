@@ -66,62 +66,92 @@ class Index extends React.Component {
           </h4>
           <p className="text-faded mb-0">Cheaper than Western Union</p>
         </div>
+        <div className="col-lg-3 col-md-6">
+          <span className="service-icon rounded-circle mx-auto mb-3">
+            <img src="static/safe.png" />
+          </span>
+          <h4>
+            <strong>Safe and Secure</strong>
+          </h4>
+          <p className="text-faded mb-0">You can trust us with your data</p>
+        </div>
       </div>
     </div>
   </section>
 
-  
+  <section className="content-section bg-light" id="about">
+  <h1 className="title-uses">Use Cases</h1> 
+    <div className="container-box">   
+          <section className='child-container'>
+          <img className="money" src="/static/texting.png" />
+          </section>    
+          <section className='child-container'>
+          <h1 className="right-text">SMS is cheap</h1>
+          <p className="use-paragraph">orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
+            Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+            unknown printer took a galley of type and scrambled it to make a type specimen book. 
+            It has survived not only five centuries, but also the leap into electronic typesetting
+            , remaining essentially unchanged. It was popularised in the 1960s with the release 
+            of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
+            publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          </section>  
+    </div>
+  </section>
 
-  <section className="content-section" id="portfolio">
-    <div className="container">
-      <div className="content-section-heading text-center">
-        <h2 className="mb-5">Use Cases</h2>
-      </div>
-      <div className="row no-gutters">
-        <div className="col-lg-6">
-          <a className="portfolio-item" href="#">
-            <span className="caption">
-              <span className="caption-content">
-                <h2>Foreign Countries</h2>
-                <p className="mb-0">Wireless internet data is very expensive</p>
-              </span>
-            </span>
-            <img className="portfolio" src="/static/chat.png" />
-          </a>
-        </div>
-        <div className="col-lg-6">
-          <a className="portfolio-item" href="#">
-            <span className="caption">
-              <span className="caption-content">
-                <h2>Microtransactions</h2>
-                <p className="mb-0">People who need to send small amounts of money</p>
-              </span>
-            </span>
-            <img className="portfolio" src="/static/currency.png" alt=""/>
-          </a>
-        </div>
-        <div className="col-lg-6">
-          <a className="portfolio-item" href="#">
-            <span className="caption">
-              <span className="caption-content">
-                <p className="mb-0">People in an austere environment</p>
-              </span>
-            </span>
-            <img className="portfolio" src="/static/tent.png" alt=""/>
-          </a>
-        </div>
-        <div className="col-lg-6">
-          <a className="portfolio-item" href="#">
-            <span className="caption">
-              <span className="caption-content">
-                <h2>Workspace</h2>
-                <p className="mb-0">Participate in blockchain</p>
-              </span>
-            </span>
-            <img className="portfolio" src="/static/bitcoin.png" alt=""/>
-          </a>
-        </div>
-      </div>
+
+  <section className="content-section bg-light" id="about">
+    <div className="container-box">      
+          <section className='child-container'>
+          <h1 className="right-text">Microtransactions</h1>
+          <p className="use-paragraph">orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
+            Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+            unknown printer took a galley of type and scrambled it to make a type specimen book. 
+            It has survived not only five centuries, but also the leap into electronic typesetting
+            , remaining essentially unchanged. It was popularised in the 1960s with the release 
+            of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
+            publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          </section>
+          <section className='child-container'>
+          <img className="money" src="/static/banking.png" />
+          </section>    
+    </div>
+  </section>
+
+
+  <section className="content-section bg-light" id="about">
+    <div className="container-box"> 
+          <section className='child-container'>
+          <img className="money" src="/static/bit.jpeg" />
+          </section>     
+          <section className='child-container'>
+          <h2 className="right-text">Participate in Blockchain</h2>
+          <p className="use-paragraph">orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
+            Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+            unknown printer took a galley of type and scrambled it to make a type specimen book. 
+            It has survived not only five centuries, but also the leap into electronic typesetting
+            , remaining essentially unchanged. It was popularised in the 1960s with the release 
+            of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
+            publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          </section> 
+    </div>
+  </section>
+
+
+  <section className="content-section bg-light" id="about">
+    <div className="container-box"> 
+          <section className='child-container'>
+          <h2 className="right-text">People in Austere Environments</h2>
+          <p className="use-paragraph">orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
+            Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+            unknown printer took a galley of type and scrambled it to make a type specimen book. 
+            It has survived not only five centuries, but also the leap into electronic typesetting
+            , remaining essentially unchanged. It was popularised in the 1960s with the release 
+            of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
+            publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          </section>
+          <section className='child-container'>
+          <img className="money" src="/static/camping.jpg" />
+          </section>    
     </div>
   </section>
 
