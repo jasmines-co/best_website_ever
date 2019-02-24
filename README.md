@@ -89,7 +89,10 @@ root/
 
 ## ERD
 
-<img src="static/erd.png />
+<p align="center">
+    <img src="static/dark-logo.png"
+         width="200" />
+</p>
 
 ## Wireframes
 
