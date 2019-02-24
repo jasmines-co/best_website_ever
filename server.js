@@ -42,6 +42,10 @@ client.messages
 const accountsController = require("./routes/accounts");
 server.use(accountsController);
 
+const usersController = require("./routes/user");
+server.use(usersController);
+
+
   //twilio
   server.post('/sms', (req, res) => {
     const twiml = new MessagingResponse();
