@@ -90,6 +90,11 @@ root/
 ## API Integration - What APIs are we using? 
 * [Twilio](https://www.twilio.com/) - Send text messages
 
+### Documentation
+[Documentation](https://jasmines-co.github.io/best_website_ever/) - Documentation
+
+To learn more about our app visit our documentation site
+
 ### Installing
 
 To beginning using the project, fork and clone the project
