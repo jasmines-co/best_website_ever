@@ -91,7 +91,7 @@ root/
 
 <p align="center">
     <img src="static/erd.png"
-         width="200" height="400" />
+         width="200" />
 </p>
 
 ## Wireframes
