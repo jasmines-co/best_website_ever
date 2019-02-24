@@ -35,7 +35,7 @@ To enable people of across the world to take control of their personal finances
   - Technologies: Node, Express, MongoDB, Google Cloud, Trello
 
 
-## File Structure 🗂
+## File Structure 
 ```
 root/
 |
@@ -87,10 +87,10 @@ root/
 * [MongoDB](https://www.mongodb.com/) - Document based database
 * [Next.js](https://nextjs.org/) - React framework for rendering server side apps
 
-## API Integration - What APIs are we using? 💻 📡
+## API Integration - What APIs are we using? 
 - Twilio to send text messages
 
-## Running 🏃
+## Running 
 Live version - http://toshi-text.herokuapp.com/
 
 If you would like to run the app on your local server, you can fork and/or clone the repo. From the root route, type 'npm run start' and the 'npm run dev' to build the react app.
