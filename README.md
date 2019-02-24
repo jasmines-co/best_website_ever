@@ -90,13 +90,16 @@ root/
 ## ERD
 
 <p align="center">
-    <img src="static/dark-logo.png"
+    <img src="static/erd.png"
          width="200" />
 </p>
 
 ## Wireframes
 
-<img src="static/wireframe1.png />
+<p align="center">
+    <img src="static/wireframe1.png"
+         width="200" />
+</p>
 
 
 
