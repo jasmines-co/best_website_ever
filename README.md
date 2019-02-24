@@ -88,7 +88,7 @@ root/
 * [Next.js](https://nextjs.org/) - React framework for rendering server side apps
 
 ## API Integration - What APIs are we using? 
-- * [Twilio](https://www.twilio.com/) - Send text messages
+* [Twilio](https://www.twilio.com/) - Send text messages
 
 ### Installing
 
@@ -122,8 +122,6 @@ git push heroku master
 
 ## Running 
 Live version - http://toshi-text.herokuapp.com/
-
-If you would like to run the app on your local server, you can fork and/or clone the repo. From the root route, type 'npm run start' and the 'npm run dev' to build the react app.
 
 ## Authors
 
