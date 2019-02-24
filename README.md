@@ -87,6 +87,16 @@ root/
 * [MongoDB](https://www.mongodb.com/) - Document based database
 * [Next.js](https://nextjs.org/) - React framework for rendering server side apps
 
+## ERD
+
+<img src="static/erd.png />
+
+## Wireframes
+
+<img src="static/wireframe1.png />
+
+
+
 ## API Integration - What APIs are we using? 
 * [Twilio](https://www.twilio.com/) - Send text messages
 
