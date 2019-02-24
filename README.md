@@ -91,13 +91,19 @@ root/
 
 <p align="center">
     <img src="static/erd.png"
-         width="200" />
+         width="200" height="400" />
 </p>
 
 ## Wireframes
 
 <p align="center">
     <img src="static/wireframe1.png"
+         width="200" />
+     <img src="static/wireframe2.png"
+         width="200" />
+    <img src="static/wireframe3.png"
+         width="200" />
+    <img src="static/wireframe4.png"
          width="200" />
 </p>
 
