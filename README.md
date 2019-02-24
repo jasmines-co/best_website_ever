@@ -12,7 +12,7 @@
 * [Contact Info](https://github.com/jasmines-co/best_website_ever/tree/master#contact-info)
 
 ## What is ToshiText
-This a class project developed by five students for the Software Professional Development(SPD) 1.3 at Make School in San Francisco, California
+Provides the ability to send blockchain payments via text message. This a class project developed by five students for the Software Professional Development(SPD) 1.3 at Make School in San Francisco, California
 
 ## Goal of ToshiText
 To enable people of across the world to take control of their personal finances 
@@ -83,12 +83,42 @@ root/
 
 ## Built With
 
-* [Node](hhttps://nodejs.org/en/) - Node
+* [Node](https://nodejs.org/en/) - Node
 * [MongoDB](https://www.mongodb.com/) - Document based database
 * [Next.js](https://nextjs.org/) - React framework for rendering server side apps
 
 ## API Integration - What APIs are we using? 
-- Twilio to send text messages
+- * [Twilio](https://www.twilio.com/) - Send text messages
+
+### Installing
+
+To beginning using the project, fork and clone the project
+After cloning, start your database
+After starting database, start you server
+
+```
+Git fork
+Git clone best_website_ever
+Mongod
+npm run dev
+```
+## Deployment
+To deploy to Heroku
+
+```
+git fork
+git clone best_website_ever
+mongod
+npm run dev
+git add .
+git commit -m 'initial commit'
+heroku create my-cool-app-name
+git remote -v
+heroku ps:scale web=1
+heroku addons:create mongolab:sandbox
+git push heroku master
+
+```
 
 ## Running 
 Live version - http://toshi-text.herokuapp.com/
