@@ -121,12 +121,14 @@ To learn more about our app visit our documentation site
 
 To beginning using the project, fork and clone the project
 After cloning, start your database
-After starting database, start you server
+After starting database, start your server
+
+Rename .env.example to .env and change the example keys to your own.
 
 ```
-Git fork
-Git clone best_website_ever
-Mongod
+git fork
+git clone best_website_ever
+mongod
 npm run dev
 ```
 ## Deployment
