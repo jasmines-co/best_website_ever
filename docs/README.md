@@ -12,15 +12,15 @@ This a class project developed by five students for the Software Product Develop
 ## Goal of ToshiText
 To enable people across the world to take control of their personal finances.
 
-### Documentation
+## Documentation
 To learn more about toshiText visit our [documentation site](https://jasmines-co.github.io/best_website_ever/)
 
-## Built With
+### Built With
 * [Node](https://nodejs.org/en/) - Node
 * [MongoDB](https://www.mongodb.com/) - Document based database
 * [Next.js](https://nextjs.org/) - React framework for rendering server side apps
 
-## API Integrations
+### API Integrations
 * [Twilio](https://www.twilio.com/) - Send text messages
 * [BlockCypher API](https://www.blockcypher.com/dev/bitcoin/) - create bitcoin wallets and send transactions
 
@@ -33,7 +33,7 @@ To learn more about toshiText visit our [documentation site](https://jasmines-co
 ## Command Structure
 `send <amount> <destination number>`
 
-## Examples
+**Examples**
 ```
 send mbtc0.004 4150000000
 send $4 5031234567
@@ -97,16 +97,17 @@ root/
 |-- misc
 ```
 
-### Try it yourself
+## Try it yourself
 To begin using the project:
 
+### Locally
 * clone it
 * rename `.env.example` to `.env` 
 * change the example keys in `.env` to your own
 * start your database
 * start the app
 
-#### Example
+**Example**
 ```
 $ git clone git@github.com:jasmines-co/best_website_ever.git
 $ cd best_website_ever
@@ -116,13 +117,16 @@ $ mongod
 $ npm run dev
 ```
 
-## Deploy it yourself
+### Deploy to Heroku
 To deploy to Heroku:
+* commit what you have
+* create an app
+* add mongolab
+* add the .env variables found in .env.example
+* push
 
+**example**
 ```
-git clone git@github.com:jasmines-co/best_website_ever.git
-mongod
-npm run dev
 git add .
 git commit -m 'deploying to heroku'
 heroku create my-cool-app-name
@@ -136,18 +140,18 @@ git push heroku master
 Live version - http://toshi-text.herokuapp.com/
 
 ## Developers
-### Jasmine Anderson
+**Jasmine Anderson**
   - Role: Backend Engineer
   - Technologies: Node, Express, Handlebars, MongoDB
-### Kendra Moore
+**Kendra Moore**
   - Role: Frontend Engineer
   - Technologies: Node, Express, MongoDB, Next
-### Sukrobjon Golibboev
+**Sukrobjon Golibboev**
   - Role: Backend Engineer
   - Technologies: Node, Express, MongoDB
-### Fodé Diop
+**Fodé Diop**
   - Role: Senior Backend Engineer
   - Technologies: Node, Express, MongoDB
-### Jasmine Humbert
+**Jasmine Humbert**
   - Role: Product Manager
   - Technologies: Node, Express, MongoDB, Google Cloud, Git/Github
