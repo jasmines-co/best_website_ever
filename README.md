@@ -3,6 +3,8 @@
          width="300" />
 </p>
 
+# toshiText
+
 *toshiText is an application to send bitcoin transactions via text message.*
 
 This a class project developed by five students for the Software Product Development class (SPD) 1.3 at Make School in San Francisco, California.
@@ -10,23 +12,44 @@ This a class project developed by five students for the Software Product Develop
 ## Goal of ToshiText
 To enable people across the world to take control of their personal finances.
 
-## Developers
-### Jasmine Anderson
-  - Role: Backend Engineer
-  - Technologies: Node, Express, Handlebars, MongoDB
-### Kendra Moore
-  - Role: Frontend Engineer
-  - Technologies: Node, Express, MongoDB, Next
-### Sukrobjon Golibboev
-  - Role: Backend Engineer
-  - Technologies: Node, Express, MongoDB
-### Fodé Diop
-  - Role: Senior Backend Engineer
-  - Technologies: Node, Express, MongoDB
-### Jasmine Humbert
-  - Role: Product Manager
-  - Technologies: Node, Express, MongoDB, Google Cloud, Git/Github
+### Documentation
+To learn more about toshiText visit our [documentation site](https://jasmines-co.github.io/best_website_ever/)
 
+## Built With
+* [Node](https://nodejs.org/en/) - Node
+* [MongoDB](https://www.mongodb.com/) - Document based database
+* [Next.js](https://nextjs.org/) - React framework for rendering server side apps
+
+## API Integrations
+* [Twilio](https://www.twilio.com/) - Send text messages
+* [BlockCypher API](https://www.blockcypher.com/dev/bitcoin/) - create bitcoin wallets and send transactions
+
+## ERD
+<p align="center">
+    <img src="static/erd.png"
+         width="200" />
+</p>
+
+## Command Structure
+`send <amount> <destination number>`
+
+## Examples
+```
+send mbtc0.004 4150000000
+send $4 5031234567
+```
+
+## Wireframes
+<p align="center">
+    <img src="static/wireframe1.png"
+         width="200" />
+     <img src="static/wireframe2.png"
+         width="200" />
+    <img src="static/wireframe3.png"
+         width="200" />
+    <img src="static/wireframe4.png"
+         width="200" />
+</p>
 
 ## File Structure 
 ```
@@ -74,46 +97,6 @@ root/
 |-- misc
 ```
 
-## Built With
-
-* [Node](https://nodejs.org/en/) - Node
-* [MongoDB](https://www.mongodb.com/) - Document based database
-* [Next.js](https://nextjs.org/) - React framework for rendering server side apps
-
-## API Integration - What APIs are we using? 
-* [Twilio](https://www.twilio.com/) - Send text messages
-* [BlockCypher API](https://www.blockcypher.com/dev/bitcoin/) - create bitcoin wallets and send transactions
-
-## ERD
-
-<p align="center">
-    <img src="static/erd.png"
-         width="200" />
-</p>
-
-## Command Structure
-`send <amount> <destination number>`
-## Examples
-```
-send mbtc0.004 4150000000
-send $4 5031234567
-```
-
-## Wireframes
-<p align="center">
-    <img src="static/wireframe1.png"
-         width="200" />
-     <img src="static/wireframe2.png"
-         width="200" />
-    <img src="static/wireframe3.png"
-         width="200" />
-    <img src="static/wireframe4.png"
-         width="200" />
-</p>
-
-### Documentation
-To learn more about toshiText visit our [documentation site](https://jasmines-co.github.io/best_website_ever/)
-
 ### Try it yourself
 To begin using the project:
 
@@ -151,4 +134,22 @@ git push heroku master
 
 ## Live Version 
 Live version - http://toshi-text.herokuapp.com/
+
+## Developers
+### Jasmine Anderson
+  - Role: Backend Engineer
+  - Technologies: Node, Express, Handlebars, MongoDB
+### Kendra Moore
+  - Role: Frontend Engineer
+  - Technologies: Node, Express, MongoDB, Next
+### Sukrobjon Golibboev
+  - Role: Backend Engineer
+  - Technologies: Node, Express, MongoDB
+### Fodé Diop
+  - Role: Senior Backend Engineer
+  - Technologies: Node, Express, MongoDB
+### Jasmine Humbert
+  - Role: Product Manager
+  - Technologies: Node, Express, MongoDB, Google Cloud, Git/Github
+
 
