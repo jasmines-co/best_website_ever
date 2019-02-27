@@ -1,21 +1,14 @@
 <p align="center">
     <img src="static/dark-logo.png"
-         width="200" />
+         width="300" />
 </p>
 
-# ToshiText
+*toshiText is an application to send bitcoin transactions via text message.*
 
-* [About ToshiText](https://github.com/jasmines-co/best_website_ever/tree/master#what-is-toshitext-)
-* [The Team](https://github.com/jasmines-co/best_website_ever/tree/master#the-team)
-* [Running](https://github.com/jasmines-co/best_website_ever/tree/master#running)
-* [Testing](https://github.com/jasmines-co/best_website_ever/tree/master#testing)
-* [Contact Info](https://github.com/jasmines-co/best_website_ever/tree/master#contact-info)
-
-## What is ToshiText
-Provides the ability to send blockchain payments via text message. This a class project developed by five students for the Software Professional Development(SPD) 1.3 at Make School in San Francisco, California
+This a class project developed by five students for the Software Product Development class (SPD) 1.3 at Make School in San Francisco, California.
 
 ## Goal of ToshiText
-To enable people of across the world to take control of their personal finances 
+To enable people across the world to take control of their personal finances.
 
 ## Developers
 ### Jasmine Anderson
@@ -32,7 +25,7 @@ To enable people of across the world to take control of their personal finances
   - Technologies: Node, Express, MongoDB
 ### Jasmine Humbert
   - Role: Product Manager
-  - Technologies: Node, Express, MongoDB, Google Cloud, Trello
+  - Technologies: Node, Express, MongoDB, Google Cloud, Git/Github
 
 
 ## File Structure 
@@ -87,6 +80,10 @@ root/
 * [MongoDB](https://www.mongodb.com/) - Document based database
 * [Next.js](https://nextjs.org/) - React framework for rendering server side apps
 
+## API Integration - What APIs are we using? 
+* [Twilio](https://www.twilio.com/) - Send text messages
+* [BlockCypher API](https://www.blockcypher.com/dev/bitcoin/) - create bitcoin wallets and send transactions
+
 ## ERD
 
 <p align="center">
@@ -103,7 +100,6 @@ send $4 5031234567
 ```
 
 ## Wireframes
-
 <p align="center">
     <img src="static/wireframe1.png"
          width="200" />
@@ -115,21 +111,13 @@ send $4 5031234567
          width="200" />
 </p>
 
-
-
-## API Integration - What APIs are we using? 
-* [Twilio](https://www.twilio.com/) - Send text messages
-
 ### Documentation
-[Documentation](https://jasmines-co.github.io/best_website_ever/) - Documentation
+To learn more about toshiText visit our [documentation site](https://jasmines-co.github.io/best_website_ever/)
 
-To learn more about our app visit our [documentation site](https://jasmines-co.github.io/best_website_ever/)
+### Try it yourself
+To begin using the project:
 
-### Installing
-
-To begin using the project, 
-
-* clone the project
+* clone it
 * rename `.env.example` to `.env` 
 * change the example keys in `.env` to your own
 * start your database
@@ -137,35 +125,30 @@ To begin using the project,
 
 #### Example
 ```
+$ git clone git@github.com:jasmines-co/best_website_ever.git
+$ cd best_website_ever
 $ npm install
 $ cp .env.example .env
 $ mongod
 $ npm run dev
 ```
 
-## Deployment
-To deploy to Heroku
+## Deploy it yourself
+To deploy to Heroku:
 
 ```
 git clone git@github.com:jasmines-co/best_website_ever.git
 mongod
 npm run dev
 git add .
-git commit -m 'initial commit'
+git commit -m 'deploying to heroku'
 heroku create my-cool-app-name
 git remote -v
 heroku ps:scale web=1
 heroku addons:create mongolab:sandbox
 git push heroku master
-
 ```
 
-## Running 
+## Live Version 
 Live version - http://toshi-text.herokuapp.com/
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-
 
