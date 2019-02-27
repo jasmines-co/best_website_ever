@@ -15,7 +15,7 @@ class Index extends React.Component {
     <BaseLayout {...this.props.auth}>
     <div>
       <img className="logo" src="/static/dark-logo.png" alt="logo" />
-      <p className='tagline'>Bitcoin Cash at your Fingertips</p>
+      <p className='tagline'>Bitcoin at your Fingertips</p>
     </div>
     <div>
 
@@ -147,7 +147,8 @@ class Index extends React.Component {
             It has survived not only five centuries, but also the leap into electronic typesetting
             , remaining essentially unchanged. It was popularised in the 1960s with the release 
             of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
-            publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
           </section> 
     </div>
   </section>
@@ -157,13 +158,9 @@ class Index extends React.Component {
     <div className="container-box"> 
           <section className='child-container'>
           <h2 className="right-text">Living in an Austere Environments</h2>
-          <p className="use-paragraph">orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
-            Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
-            unknown printer took a galley of type and scrambled it to make a type specimen book. 
-            It has survived not only five centuries, but also the leap into electronic typesetting
-            , remaining essentially unchanged. It was popularised in the 1960s with the release 
-            of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
-            publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          <p className="use-paragraph">
+            More than 4 billion people worldwide, mostly in developed contries still don't have access to the internet. Yet 75% of the world's population has access to cellphones. ToshiText allows users and communities immediate and broader access to financial services.
+          </p>
           </section>
           <section className='child-container'>
           <img className="money" src="/static/camping.jpg" />
