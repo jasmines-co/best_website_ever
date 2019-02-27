@@ -94,6 +94,14 @@ root/
          width="200" />
 </p>
 
+## Command Structure
+`send <amount> <destination number>`
+## Examples
+```
+send mbtc0.004 4150000000
+send $4 5031234567
+```
+
 ## Wireframes
 
 <p align="center">
@@ -115,28 +123,31 @@ root/
 ### Documentation
 [Documentation](https://jasmines-co.github.io/best_website_ever/) - Documentation
 
-To learn more about our app visit our documentation site
+To learn more about our app visit our [documentation site](https://jasmines-co.github.io/best_website_ever/)
 
 ### Installing
 
-To beginning using the project, fork and clone the project
-After cloning, start your database
-After starting database, start your server
+To begin using the project, 
 
-Rename .env.example to .env and change the example keys to your own.
+* clone the project
+* rename `.env.example` to `.env` 
+* change the example keys in `.env` to your own
+* start your database
+* start the app
 
+#### Example
 ```
-git fork
-git clone best_website_ever
-mongod
-npm run dev
+$ npm install
+$ cp .env.example .env
+$ mongod
+$ npm run dev
 ```
+
 ## Deployment
 To deploy to Heroku
 
 ```
-git fork
-git clone best_website_ever
+git clone git@github.com:jasmines-co/best_website_ever.git
 mongod
 npm run dev
 git add .
@@ -151,11 +162,6 @@ git push heroku master
 
 ## Running 
 Live version - http://toshi-text.herokuapp.com/
-
-## Authors
-
-
-See also the list of [contributors](https://github.com/jasmines-co/best_website_ever) who participated in this project.
 
 ## License
 
