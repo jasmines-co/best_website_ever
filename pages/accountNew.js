@@ -4,6 +4,8 @@ import BaseLayout from '../components/layouts/BaseLayout';
 import AccountForm from '../components/account/AccountForm';
 
 
+import { createAccount } from '../actions';
+import { userInfo } from 'os';
 
 class AccountNew extends React.Component {
 
@@ -12,19 +14,23 @@ class AccountNew extends React.Component {
     this.saveAccount = this.saveAccount.bind(this);
   }
   saveAccount(accountData) {
-    alert(JSON.stringify(accountData, null, 2));
+    createAccount(accountData).then((account) =>{
+      console.log(account);
+    }).catch((err) => {
+      console.log(err)
+    })
   }
 
   renderSecretPage() {
-    const { isAuthenticated } = this.props.auth;
+    const { isAuthenticated } = this.props;
 
     if (isAuthenticated){
       return(
         <BaseLayout {...this.props.auth}>
         <BasePage>
-         <div className="account-new">
-           <AccountForm onSumbit={this.saveAccount}/>
-         </div>
+        <div>
+            <link>https://twilio-toshi.herokuapp.com/</link>
+        </div>
         </BasePage>
      </BaseLayout>
       )

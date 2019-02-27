@@ -13,7 +13,7 @@ const requestSchema = new mongoose.Schema({
     ref: 'account'
   },
   //needs a better name
-  guest:     {
+  requestee:     {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'user'
   }
