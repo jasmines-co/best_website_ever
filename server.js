@@ -27,6 +27,18 @@ app.prepare()
   const server = express();
   server.use(bodyParser.json());
 
+
+// routes
+const accountsController = require("./routes/accounts");
+
+
+const usersController = require("./routes/user");
+
+
+const requestController = require("./routes/request");
+
+
+  //Twilio
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = require('twilio')(accountSid, authToken);
@@ -39,8 +51,6 @@ client.messages
    })
   .then(message => console.log(message.sid));
 
-const accountsController = require("./routes/accounts");
-server.use(accountsController);
 
   //twilio
   server.post('/sms', (req, res) => {

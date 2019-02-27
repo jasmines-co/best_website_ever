@@ -21,24 +21,30 @@ const validateInputs = (values) => {
     if(!values.phone) {
       errors.phone = 'Phone number is required'
     }
-    // if (!values.email) {
-    //   errors.email = 'Required';
-    // } else if (
-    //   !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-    // ) {
-    //   errors.email = 'Invalid email address';
-    // }
+    if(!values.amount) {
+      errors.phone = 'Amount is required'
+    }
+    if(!values.address) {
+      errors.phone = 'Address is required'
+    }
+    if(!values.ETH) {
+      errors.phone = 'ETH is required'
+    }
+    if(!values.owner) {
+      errors.phone = 'Owner is required'
+    }
+  
     return errors;
 }
 
-const INITIAL_VALUES = {name: '', username: '', password: '', country: '', phone: ''}
+const INITIAL_VALUES = {name: '', username: '', password: '', country: '', phone: '', address: '', amount: '', ETH: '', owner: ''}
 
-const AccountForm = (props) => (
+const AccountForm = (initialValues, onSumbit, Error) => (
   <div>
     <Formik
       initialValues={INITIAL_VALUES}
       validate={validateInputs}
-      onSubmit={props.onSubmit}
+      onSubmit={onSubmit}
     >
       {({ isSubmitting }) => (
 
@@ -65,9 +71,29 @@ const AccountForm = (props) => (
           <ErrorMessage name="country" component="div" />
         </FormGroup>
         <FormGroup>
-          <label>Phone Number</label>
-          <Field className="form-control" type="phone" name="phone" />
+          <label>Phone:</label>
+          <Field className="form-control" type="number" name="phone" />
           <ErrorMessage name="phone" component="div" />
+        </FormGroup>
+        <FormGroup>
+          <label>Address</label>
+          <Field className="form-control" type="text" name="address" />
+          <ErrorMessage name="address" component="div" />
+        </FormGroup>
+        <FormGroup>
+          <label>Amount</label>
+          <Field className="form-control" type="text" name="amount" />
+          <ErrorMessage name="amount" component="div" />
+        </FormGroup>
+        <FormGroup>
+          <label>ETH</label>
+          <Field className="form-control" type="text" name="ETH" />
+          <ErrorMessage name="ETH" component="div" />
+        </FormGroup>
+        <FormGroup>
+          <label>Owner</label>
+          <Field className="form-control" type="text" name="owner" />
+          <ErrorMessage name="owner" component="div" />
         </FormGroup>
           <button type="submit" disabled={isSubmitting}>
             Submit

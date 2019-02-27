@@ -2,6 +2,17 @@ import React from 'react';
 import BasePage from '../components/BasePage';
 import BaseLayout from '../components/layouts/BaseLayout';
 import RequestForm from '../components/account/RequestForm';
+import Link from 'next/link';
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  Button
+} from 'reactstrap';
 
 
 class Request extends React.Component {
@@ -10,8 +21,9 @@ class Request extends React.Component {
     return(
     <BaseLayout {...this.props.auth}>
     <BasePage>
-    <div>Request</div>
-    <RequestForm />
+    <NavItem>
+      <NavLink href="https://twilio-toshi.herokuapp.com/users/new">Login/SignUp</NavLink>
+    </NavItem>
     </BasePage>
     </BaseLayout>
   )

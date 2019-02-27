@@ -1,89 +1,76 @@
-
-
-// controllers/restaurants.js
+var MessagingResponse = require('twilio').twiml.MessagingResponse;
+var twilio = require('twilio');
 const express = require("express");
 
 const router = express.Router();
 
-const Request = require("../models/Request");
+const Account = require('../models/Account');
+var Request = require('../models/Request');
+var User = require('../models/User');
+var notifier = require('../lib/notifier');
 
 
+router.post('/request', function (req, res) {
+  var requestId = req.body.requestId;
+  var user = req.user;
 
-// //ROOT ROUTE - INDEX
-router.get("/accounts", (req, res) => {
-  Account.find()
-    // Provide a function for the Promise to call when it resolves- when it finished whatever it was doing.
-    .then(accounts => {
-      res.send({ accounts });
-    })
-    // Provide a function for the promise to call if it is rejected. A Promise is rejected if it fails.
-    .catch(err => {
-      console.log(err);
+  Account.findOne({ _id: accountId })
+  .then(function (account) {
+    var request = new Request({
+      message: req.body.message,
+      account: propertyId,
+      requestee: user.id
     });
+
+    return request.save();
+  })
+  .then(function () {
+    notifier.sendNotification();
+    res.send({ request });
+  })
+  .catch(function(err) {
+    console.log(err);
+  });
 });
 
-// //NEW
-// router.get("/accounts/new", (req, res) => {
-//   res.render("restaurants/new.hbs");
-// });
+// POST: /reservations/handle
+router.post('/request/handle', twilio.webhook({validate: false}), function (req, res) {
+  var from = req.body.From;
+  var smsRequest = req.body.Body;
 
-//CREATE
-router.post("/accounts", (req, res) => {
-  Account.create(req.body)
-    .then(account => {
-      res.redirect(`/accounts/${account._id}`); // Redirect to reviews/:id
-    })
-    .catch(err => {
-      console.log(err.message);
-    });
+  var smsResponse;
+
+  User.findOne({phoneNumber: from})
+  //the fuck???
+  .then(function (host) {
+    return Request.findOne({status: 'pending'});
+  })
+  .then(function (request) {
+    if (request === null) {
+      throw 'No pending reservations';
+    }
+    request.status = smsRequest.toLowerCase() === "accept" ? "confirmed" : "rejected";
+    return request.save();
+  })
+  .then(function (request) {
+    var message = "You have successfully " + request.status + " the request";
+    respond(res, message);
+  })
+  .catch(function (err) {
+    var message = "Sorry, it looks like you do not have any reservations to respond to";
+    respond(res, message);
+  });
 });
 
-// SHOW
-router.get("/accounts/:id", (req, res) => {
-  Account.findById(req.params.id)
-    .then(account => {
-      res.send({ account });
-    })
-    .catch(err => {
-      console.log(err.message);
-    });
-});
+var respond = function(res, message) {
+  var messagingResponse = new MessagingResponse();
+  messagingResponse.message({}, message);
 
-// EDIT
-// router.get("/restaurants/:id/edit", (req, res) => {
-//     Restaurant.findById(req.params.id, function(err, restaurant) {
-//     res.render("restaurants/edit.hbs", { restaurant });
-//   });
-// });
-// //
-// //UPDATE
-// router.put("/restaurants/:id", (req, res) => {
-//     if (currentUser === null) {
-//         res.redirect("/user/login");
-//     }
-//   Restaurant.findByIdAndUpdate(req.params.id, req.body)
-//     .then(restaurant => {
-//       res.redirect(`/restaurants/${restaurant._id}`); // Redirect to restaurants/:id
-//     })
-//     .catch(err => {
-//       console.log(err.message);
-//     });
-// });
-
-// // DELETE
-// router.delete("/restaurants/:id", function(req, res) {
-//     if (currentUser === null) {
-//         res.redirect("/user/login");
-//     } 
-//   Restaurant.findByIdAndRemove(req.params.id)
-//     .then(restaurant => {
-//       res.redirect("/restaurants");
-//     })
-//     .catch(err => {
-//       console.log(err.message);
-//     });
-// });
+  res.type('text/xml');
+  res.send(messagingResponse.toString());
+}
 
 
 
-module.exports = router;
+
+// module.exports = router;

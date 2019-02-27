@@ -1,89 +1,71 @@
+var express = require('express');
+var router = express.Router();
+var Account = require('../models/Account');
 
 
-// controllers/restaurants.js
-const express = require("express");
-
-const router = express.Router();
-
-const Account = require("../models/Account");
-
-
-
-// //ROOT ROUTE - INDEX
-router.get("/accounts", (req, res) => {
-  Account.find()
-    // Provide a function for the Promise to call when it resolves- when it finished whatever it was doing.
-    .then(accounts => {
-      res.send({ accounts });
-    })
-    // Provide a function for the promise to call if it is rejected. A Promise is rejected if it fails.
-    .catch(err => {
-      console.log(err);
-    });
+//GET /properties
+router.get('/accounts', function (req, res) {
+  Account.find().then(function (accounts) {
+    res.send({ accounts });
+  });
 });
 
-// //NEW
-// router.get("/accounts/new", (req, res) => {
-//   res.render("restaurants/new.hbs");
-// });
-
-//CREATE
-router.post("/accounts", (req, res) => {
-  Account.create(req.body)
-    .then(account => {
-      res.redirect(`/accounts/${account._id}`); // Redirect to reviews/:id
-    })
-    .catch(err => {
-      console.log(err.message);
-    });
+// GET /properties/new
+router.get('/accounts/new',function (req, res) {
+  Account.find().then(function (accounts) {
+    res.send({accounts});
+  });
 });
 
-// SHOW
-router.get("/accounts/:id", (req, res) => {
-  Account.findById(req.params.id)
-    .then(account => {
+//POST /accounts
+router.post('/account', function (req, res) {
+    var amount = req.body.amount;
+    var name = req.body.name;
+    var username = req.body.username;
+    var password = req.body.username;
+    var countryCode = req.body.countryCode;
+    var phoneNumber = req.body.phoneNumber;
+    var ETH = req.body.ETH;
+    var user = req.user;
+  
+    var account = new Account({ amount: amount, ETH: ETH, owner: user.id });
+    account.save()
+    .then(function (savedAccount) {
       res.send({ account });
-    })
-    .catch(err => {
-      console.log(err.message);
     });
+  });
+
+//GET /properties/1
+router.get('/accounts/:id', function (req, res) {
+  var accountId = req.params.id;
+  Account.findOne({ _id: accountId }).then(function (account) {
+    res.send({ account });
+  });
 });
 
-// EDIT
-// router.get("/restaurants/:id/edit", (req, res) => {
-//     Restaurant.findById(req.params.id, function(err, restaurant) {
-//     res.render("restaurants/edit.hbs", { restaurant });
+
+// // GET /properties/1/edit
+// router.get('/account/:id/edit', middleware.isAuthenticated, function (req, res) {
+//   var propertyId = req.params.id;
+//   Property.findOne({ _id: propertyId }).then(function (property) {
+//     res.render('properties/edit', { property: property });
 //   });
 // });
-// //
-// //UPDATE
-// router.put("/restaurants/:id", (req, res) => {
-//     if (currentUser === null) {
-//         res.redirect("/user/login");
-//     }
-//   Restaurant.findByIdAndUpdate(req.params.id, req.body)
-//     .then(restaurant => {
-//       res.redirect(`/restaurants/${restaurant._id}`); // Redirect to restaurants/:id
-//     })
-//     .catch(err => {
-//       console.log(err.message);
-//     });
+
+// // POST /properties/update
+// router.post('/update', middleware.isAuthenticated, function (req, res) {
+//   var propertyId = req.body.propertyId;
+
+//   Property.findOne({ _id: propertyId })
+//   .then(function (property) {
+//     property.description = req.body.description;
+//     property.imageUrl = req.body.imageUrl;
+
+//     return property.save();
+//   })
+//   .then(function (updatedProperty) {
+//     return res.redirect('/properties/' + updatedProperty.id);
+//   });
 // });
-
-// // DELETE
-// router.delete("/restaurants/:id", function(req, res) {
-//     if (currentUser === null) {
-//         res.redirect("/user/login");
-//     } 
-//   Restaurant.findByIdAndRemove(req.params.id)
-//     .then(restaurant => {
-//       res.redirect("/restaurants");
-//     })
-//     .catch(err => {
-//       console.log(err.message);
-//     });
-// });
-
-
 
 module.exports = router;

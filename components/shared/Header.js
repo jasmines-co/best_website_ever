@@ -62,24 +62,9 @@ export default class Header extends React.Component {
                 <Login />
               </NavItem>
               }
-                { isAuthenticated &&
-              <NavItem>
-               <NavLink href="/accountNew">Account</NavLink>
-              </NavItem>
-              }
               { isAuthenticated &&
               <NavItem>
-               <NavLink href="/request">Request</NavLink>
-              </NavItem>
-              }
-              { isAuthenticated &&
-              <NavItem>
-               <NavLink href="/wallet">Wallet</NavLink>
-              </NavItem>
-              }
-              { isAuthenticated &&
-              <NavItem>
-               <NavLink>{ user.name }</NavLink>
+               <NavLink href="https://twilio-toshi.herokuapp.com/users/new">Request</NavLink>
               </NavItem>
               }
               { isAuthenticated &&
