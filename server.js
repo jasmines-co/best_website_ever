@@ -39,45 +39,45 @@ const requestController = require("./routes/request");
 
 
   //Twilio
-const accountSid = process.env.TWILIO_ACCOUNT_SID;
-const authToken = process.env.TWILIO_AUTH_TOKEN;
-const client = require('twilio')(accountSid, authToken);
+// const accountSid = process.env.TWILIO_ACCOUNT_SID;
+// const authToken = process.env.TWILIO_AUTH_TOKEN;
+// const client = require('twilio')(accountSid, authToken);
 
-client.messages
-  .create({
-     body: 'Welcome to ToshiText',
-     from: process.env.phoneNumber,
-     to: process.env.TWILIO_NUMBER
-   })
-  .then(message => console.log(message.sid));
+// client.messages
+//   .create({
+//      body: 'Welcome to ToshiText',
+//      from: process.env.phoneNumber,
+//      to: process.env.TWILIO_NUMBER
+//    })
+//   .then(message => console.log(message.sid));
 
 
   //twilio
-  server.post('/sms', (req, res) => {
-    const twiml = new MessagingResponse();
+  // server.post('/sms', (req, res) => {
+  //   const twiml = new MessagingResponse();
   
-    twiml.message('How can I help you?');
+  //   twiml.message('How can I help you?');
   
-    res.writeHead(200, {'Content-Type': 'text/xml'});
-    res.end(twiml.toString());
-  });
+  //   res.writeHead(200, {'Content-Type': 'text/xml'});
+  //   res.end(twiml.toString());
+  // });
 
-  server.post('/', (req, res) => {
-    const twiml = new MessagingResponse();
+  // server.post('/', (req, res) => {
+  //   const twiml = new MessagingResponse();
   
-    if (req.body.Body == 'Account') {
-      twiml.message('You must create an account');
-    } else if (req.body.Body == 'Balance') {
-      twiml.message('You must create an account');
-    } else {
-      twiml.message(
-        'No Body param match, Twilio sends this in the request to your server.'
-      );
-    }
+  //   if (req.body.Body == 'Account') {
+  //     twiml.message('You must create an account');
+  //   } else if (req.body.Body == 'Balance') {
+  //     twiml.message('You must create an account');
+  //   } else {
+  //     twiml.message(
+  //       'No Body param match, Twilio sends this in the request to your server.'
+  //     );
+  //   }
   
-    res.writeHead(200, { 'Content-Type': 'text/xml' });
-    res.end(twiml.toString());
-  });
+  //   res.writeHead(200, { 'Content-Type': 'text/xml' });
+  //   res.end(twiml.toString());
+  // });
   
   
 
