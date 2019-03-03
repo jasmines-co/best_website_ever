@@ -13,6 +13,14 @@ html, body {
       padding: 100px;
   }
 
+  .space-three {
+      padding-top: 125px;
+  }
+
+  .space-four {
+      padding-top: 125px;
+  }
+
   .title-uses {
       text-align: center;
       margin-bottom: 50px;
@@ -49,6 +57,11 @@ h2.right-text-four {
     color: #07207F;
 }
 
+
+h2.right-text-three {
+    color: #07207F;
+    padding-left: 50px;
+}
   .space-two {
       padding-top: 100px;
   }
@@ -154,6 +167,15 @@ h2.right-text-four {
 .use-paragraph-four {
     color: #07207F;
     padding-left: 50px;
+}
+
+.use-paragraph-five {
+    color: #07207F;
+    padding-right: 50px;
+}
+
+.space-five {
+    padding-top: 125px;
 }
     /*******************************************************************************
 White section
