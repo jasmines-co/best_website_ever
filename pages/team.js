@@ -52,7 +52,14 @@ class Team extends React.Component {
           <br/>
           <CardSubtitle>Backend Engineer</CardSubtitle>
           <br/>
-          <CardText>Is Amazing.</CardText>
+          <CardText>Sukhrob is and has been passionate about problem solving and technologies. 
+            Before discovering the software side of technology, he studied at school for specialized 
+            exact sciences to include Mathematics and Physics. He showed a great work ethic and high academic 
+            performance at the places he worked and studied. At the same time, he developed leadership 
+            skills by being a class counselor for three years at the college. Before coming to Make School, 
+            Sukhrob had gained some experiences in C/C++ low-level languages. During past terms, he has 
+            developed solid knowledge on Javascript and Python and completed projects in the field of 
+            TDD development, backend and NLP(Natural Language Processing) based on Markov chain respectively.</CardText>
         </CardBody>
       </Card>
       <Card>
@@ -83,7 +90,9 @@ class Team extends React.Component {
           <br/>
           <CardSubtitle>Product Manager/Git Master</CardSubtitle>
           <br/>
-          <CardText>Also amazing.</CardText>
+          <CardText>Jasmine is a software developer currently pursuing a computer science degree after 
+            working as a web developer for a year. Her interests are primarily data science and 
+            offensive security.</CardText>
         </CardBody>
       </Card>
     </CardGroup>
