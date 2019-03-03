@@ -58,10 +58,10 @@ export default class Header extends React.Component {
                 <NavLink href="/about">About</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/https://twilio-toshi.herokuapp.com/users/new">Login</NavLink>
+                <NavLink href="https://twilio-toshi.herokuapp.com/users/new">Login</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/https://twilio-toshi.herokuapp.com/sessions/login">Signup</NavLink>
+                <NavLink href="https://twilio-toshi.herokuapp.com/sessions/login">Signup</NavLink>
               </NavItem>
               { isAuthenticated &&
               <NavItem>
