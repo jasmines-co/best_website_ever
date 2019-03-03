@@ -9,9 +9,14 @@ html, body {
     font-family: Lato;
   }
 
+  .space {
+      padding: 100px;
+  }
+
   .title-uses {
       text-align: center;
       margin-bottom: 50px;
+      color: #07207F;
   }
 
   .container-box {
@@ -21,14 +26,34 @@ html, body {
       align-content: flex-start;
   }
 
-  h2.right-test {
-      margin-top: 100px;
-  }
-
   img.money {
       width: 675px;
       height: 450px;
   }
+
+  h3.right-text {
+      padding-right: 100px;
+      color: #07207F;
+  }
+
+  h1.right-text-two {
+    padding-left: 50px;
+    color: #07207F;
+}
+
+h1.right-text-three {
+    color: #07207F;
+}
+
+h2.right-text-four {
+    color: #07207F;
+}
+
+  .space-two {
+      padding-top: 100px;
+  }
+
+
 
   body {
       background-color: #07207F;
@@ -72,7 +97,7 @@ html, body {
   }
 
   p.tagline {
-    margin-left: 600px; 
+    margin-left: 675px; 
   }
 
   .clickable {
@@ -113,8 +138,23 @@ html, body {
   }
 
   .use-paragraph {
-      color: black;
+    color: #07207F;
   }
+
+  .use-paragraph-two {
+    color: #07207F;
+    padding-left: 50px;
+}
+
+.use-paragraph-three {
+    color: #07207F;
+    padding-right: 50px;
+}
+
+.use-paragraph-four {
+    color: #07207F;
+    padding-left: 50px;
+}
     /*******************************************************************************
 White section
 *******************************************************************************/

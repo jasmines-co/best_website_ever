@@ -22,7 +22,9 @@ class Index extends React.Component {
   <section className="content-section bg-light" id="about">
     <div className="container-box">      
           <section className='child-container'>
-          <h2 className="right-text">Send Your Friends and Family Money in Seconds!</h2>
+          <div className="space">
+          </div>
+          <h3 className="right-text">Send Your Friends and Family Money in Seconds!</h3>
           </section>
           <section className='child-container'>
           <img className="money" src="/static/sending-money.png" />
@@ -102,8 +104,10 @@ class Index extends React.Component {
           <img className="money" src="/static/texting.png" />
           </section>    
           <section className='child-container'>
-          <h1 className="right-text">Phone Data is Expensive</h1>
-          <p className="use-paragraph">orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
+          <div className="space-two">
+          </div>
+          <h1 className="right-text-two">Phone Data is Expensive</h1>
+          <p className="use-paragraph-two">orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
             Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
             unknown printer took a galley of type and scrambled it to make a type specimen book. 
             It has survived not only five centuries, but also the leap into electronic typesetting
@@ -118,8 +122,8 @@ class Index extends React.Component {
   <section className="content-section bg-light" id="about">
     <div className="container-box">      
           <section className='child-container'>
-          <h1 className="right-text">Need to Conduct Microtransactions</h1>
-          <p className="use-paragraph">orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
+          <h1 className="right-text-three">Need to Conduct Microtransactions</h1>
+          <p className="use-paragraph-three">orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
             Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
             unknown printer took a galley of type and scrambled it to make a type specimen book. 
             It has survived not only five centuries, but also the leap into electronic typesetting
@@ -140,8 +144,8 @@ class Index extends React.Component {
           <img className="money" src="/static/blockchain.jpg" />
           </section>     
           <section className='child-container'>
-          <h2 className="right-text">Desire to Participate in Blockchain</h2>
-          <p className="use-paragraph">orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
+          <h2 className="right-text-four">Desire to Participate in Blockchain</h2>
+          <p className="use-paragraph-four">orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
             Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
             unknown printer took a galley of type and scrambled it to make a type specimen book. 
             It has survived not only five centuries, but also the leap into electronic typesetting
@@ -157,7 +161,7 @@ class Index extends React.Component {
   <section className="content-section bg-light" id="about">
     <div className="container-box"> 
           <section className='child-container'>
-          <h2 className="right-text">Living in an Austere Environments</h2>
+          <h2 className="right-text-four">Living in an Austere Environments</h2>
           <p className="use-paragraph">
             More than 4 billion people worldwide, mostly in developed contries still don't have access to the internet. Yet 75% of the world's population has access to cellphones. ToshiText allows users and communities immediate and broader access to financial services.
           </p>
