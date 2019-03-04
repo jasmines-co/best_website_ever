@@ -107,13 +107,11 @@ class Index extends React.Component {
           <div className="space-two">
           </div>
           <h1 className="right-text-two">Phone Data is Expensive</h1>
-          <p className="use-paragraph-two">orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
-            Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
-            unknown printer took a galley of type and scrambled it to make a type specimen book. 
-            It has survived not only five centuries, but also the leap into electronic typesetting
-            , remaining essentially unchanged. It was popularised in the 1960s with the release 
-            of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
-            publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          <p className="use-paragraph-two">In many countries, cell phone data is very expensive. As a result
+          people typically use the internet at home or in wireless cafes. ToshiText will allow users to send
+          money without internet using SMS. Users will need to create an account and wallet using the internet
+          and then they can send money to their friends and families.
+          </p>
           </section>  
     </div>
   </section>
@@ -126,13 +124,10 @@ class Index extends React.Component {
 
           </div>
           <h1 className="right-text-three">Need to Conduct Microtransactions</h1>
-          <p className="use-paragraph-three">orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
-            Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
-            unknown printer took a galley of type and scrambled it to make a type specimen book. 
-            It has survived not only five centuries, but also the leap into electronic typesetting
-            , remaining essentially unchanged. It was popularised in the 1960s with the release 
-            of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
-            publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          <p className="use-paragraph-three">Many people in foreign countries do not have access
+          to safe and secure bank accounts. People still need to send money and make payments. Sending money via
+          Western Union can be very expensive and many payments apps without a bank account can be insecure. This app
+          will give people the ability to make microtransactions without a bank account.</p>
           </section>
           <section className='child-container'>
           <img className="money" src="/static/banking.png" />
@@ -151,13 +146,9 @@ class Index extends React.Component {
 
           </div>
           <h2 className="right-text-three">Desire to Participate in Blockchain</h2>
-          <p className="use-paragraph-four">orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
-            Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
-            unknown printer took a galley of type and scrambled it to make a type specimen book. 
-            It has survived not only five centuries, but also the leap into electronic typesetting
-            , remaining essentially unchanged. It was popularised in the 1960s with the release 
-            of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
-            publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          <p className="use-paragraph-four"> This app will allow users to purchase blockchain without
+          starting a Coinbase account and linking your Coinbase account to your bank account. You can purchase
+          small amounts of blockchain using our app.
             </p>
           </section> 
     </div>
